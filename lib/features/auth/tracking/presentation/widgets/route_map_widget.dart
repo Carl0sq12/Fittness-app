@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart' hide Route;
 import 'dart:async';
+
 import '../../data/datasources/gps_datasource.dart';
 import '../../domain/entities/location_point.dart';
 import '../../../../../injection_container.dart';
@@ -13,11 +13,13 @@ class RouteMapWidget extends StatefulWidget {
 }
 
 class _RouteMapWidgetState extends State<RouteMapWidget> {
-  final GpsDataSource _dataSource = sl<GpsDataSource>();
+  final GpsDataSource _dataSource = sl<GpsDataSource>();  //inyecta
+
   Route _route = Route();
   GpsKalmanFilter _kalmanFilter = GpsKalmanFilter();
 
   StreamSubscription<LocationPoint>? _subscription;
+
   bool _isTracking = false;
   String _statusMessage = 'Presiona Iniciar';
 
@@ -37,6 +39,7 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
 
   Future<void> _startTracking() async {
     final hasPermission = await _dataSource.requestPermissions();
+
     if (!hasPermission) {
       setState(() {
         _statusMessage = 'Permisos denegados';
@@ -46,14 +49,18 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
     }
 
     final gpsEnabled = await _dataSource.isGpsEnabled();
+
     if (!gpsEnabled) {
       setState(() {
         _statusMessage = 'GPS desactivado';
       });
+
       final shouldOpen = await _showGpsDisabledDialog();
+
       if (shouldOpen) {
         await _dataSource.openLocationSettings();
       }
+
       return;
     }
 
@@ -64,30 +71,23 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
       _statusMessage = 'Buscando señal GPS...';
     });
 
-    // Obtener la ubicación inicial (última conocida) de forma inmediata
     final initialPoint = await _dataSource.getCurrentLocation();
-    if (initialPoint != null && _isTracking) {
-      // Solo usar punto inicial si tiene buena precisión
-      if (initialPoint.accuracy <= 35) {
-        final filteredInitial = _kalmanFilter.filter(initialPoint);
-        setState(() {
-          _route.addPoint(filteredInitial);
-          _statusMessage = 'Tracking - ${_route.points.length} puntos';
-        });
-      }
+
+    if (initialPoint != null && _isTracking && initialPoint.accuracy <= 35) {
+      final filteredInitial = _kalmanFilter.filter(initialPoint);
+
+      setState(() {
+        _route.addPoint(filteredInitial);
+        _statusMessage = 'Tracking - ${_route.points.length} puntos';
+      });
     }
 
-    _subscription = _dataSource.locationStream.listen(
+    _subscription = _dataSource.locationStream.listen(  //stream plugin
       (LocationPoint point) {
-        print('📍 GPS: ${point.latitude}, ${point.longitude}, acc=${point.accuracy}m');
-
-        // Ignorar puntos de muy baja precisión (como redes de celular en interiores)
         if (point.accuracy > 35) {
-          print('⚠️ GPS: Ignorando punto por baja precisión (${point.accuracy}m)');
           return;
         }
 
-        // Filtrar coordenada usando filtro de Kalman
         final filteredPoint = _kalmanFilter.filter(point);
 
         if (_route.points.isEmpty) {
@@ -95,20 +95,20 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
             _route.addPoint(filteredPoint);
             _statusMessage = 'Tracking - ${_route.points.length} puntos';
           });
-        } else {
-          final lastPoint = _route.points.last;
-          final distance = lastPoint.distanceTo(filteredPoint);
+          return;
+        }
 
-          if (distance >= 1.5) {
-            setState(() {
-              _route.addPoint(filteredPoint);
-              _statusMessage = 'Tracking - ${_route.points.length} puntos';
-            });
-          }
+        final lastPoint = _route.points.last;
+        final distance = lastPoint.distanceTo(filteredPoint);
+
+        if (distance >= 0.5) {
+          setState(() {
+            _route.addPoint(filteredPoint);
+            _statusMessage = 'Tracking - ${_route.points.length} puntos';
+          });
         }
       },
       onError: (Object error) {
-        print('❌ GPS Error: $error');
         setState(() {
           _statusMessage = 'Error: $error';
         });
@@ -118,6 +118,7 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
 
   void _stopTracking() {
     _subscription?.cancel();
+    _subscription = null;
     _route.finish();
 
     setState(() {
@@ -128,37 +129,38 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
 
   Future<bool> _showGpsDisabledDialog() async {
     return await showDialog<bool>(
-      context: context,
-      barrierDismissible: false,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Row(
-            children: [
-              Icon(Icons.location_off, color: Colors.red),
-              SizedBox(width: 8),
-              Text('GPS Desactivado'),
-            ],
-          ),
-          content: const Text(
-            'El servicio de ubicación (GPS) está desactivado. Para poder registrar tu ruta, necesitas activarlo en la configuración de tu dispositivo.',
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.of(context).pop(false),
-              child: const Text('Cancelar'),
-            ),
-            ElevatedButton(
-              onPressed: () => Navigator.of(context).pop(true),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF6366F1),
-                foregroundColor: Colors.white,
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: const Row(
+                children: [
+                  Icon(Icons.location_off, color: Colors.red),
+                  SizedBox(width: 8),
+                  Text('GPS Desactivado'),
+                ],
               ),
-              child: const Text('Activar'),
-            ),
-          ],
-        );
-      },
-    ) ?? false;
+              content: const Text(
+                'El servicio de ubicación está desactivado. Para registrar tu ruta, necesitas activarlo.',
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(false),
+                  child: const Text('Cancelar'),
+                ),
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(true),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF6366F1),
+                    foregroundColor: Colors.white,
+                  ),
+                  child: const Text('Activar'),
+                ),
+              ],
+            );
+          },
+        ) ??
+        false;
   }
 
   void _showPermissionDeniedDialog() {
@@ -174,7 +176,7 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
             ],
           ),
           content: const Text(
-            'El permiso de ubicación es indispensable para trazar tu ruta. Por favor, actívalo en los ajustes de la aplicación.',
+            'El permiso de ubicación es indispensable para trazar tu ruta. Actívalo en los ajustes de la aplicación.',
           ),
           actions: [
             TextButton(
@@ -194,7 +196,6 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Column(
         children: [
-          // Header
           Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -205,7 +206,10 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
                   children: [
                     const Text(
                       'Ruta GPS',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     ElevatedButton.icon(
                       onPressed: _toggleTracking,
@@ -230,7 +234,6 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
             ),
           ),
 
-          // Mapa (Canvas)
           Container(
             height: 200,
             margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -250,7 +253,6 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
 
           const SizedBox(height: 16),
 
-          // Métricas
           Padding(
             padding: const EdgeInsets.all(16),
             child: Row(
@@ -273,7 +275,7 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
                 ),
                 _buildMetric(
                   icon: Icons.local_fire_department,
-                  value: '${_route.estimatedCalories.toStringAsFixed(0)}',
+                  value: _route.estimatedCalories.toStringAsFixed(0),
                   label: 'Calorías',
                 ),
               ],
@@ -293,8 +295,20 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
       children: [
         Icon(icon, color: const Color(0xFF6366F1)),
         const SizedBox(height: 4),
-        Text(value, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-        Text(label, style: TextStyle(color: Colors.grey[600], fontSize: 12)),
+        Text(
+          value,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
+        Text(
+          label,
+          style: TextStyle(
+            color: Colors.grey[600],
+            fontSize: 12,
+          ),
+        ),
       ],
     );
   }
@@ -307,11 +321,11 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
     if (hours > 0) {
       return '${hours}h ${minutes}m';
     }
+
     return '${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}';
   }
 }
 
-/// CustomPainter para dibujar la ruta
 class RoutePainter extends CustomPainter {
   final Route route;
 
@@ -327,7 +341,9 @@ class RoutePainter extends CustomPainter {
         ),
         textDirection: TextDirection.ltr,
       );
+
       textPainter.layout();
+
       textPainter.paint(
         canvas,
         Offset(
@@ -335,10 +351,10 @@ class RoutePainter extends CustomPainter {
           (size.height - textPainter.height) / 2,
         ),
       );
+
       return;
     }
 
-    // Calcular bounds
     double minLat = route.points.first.latitude;
     double maxLat = route.points.first.latitude;
     double minLon = route.points.first.longitude;
@@ -351,7 +367,7 @@ class RoutePainter extends CustomPainter {
       if (point.longitude > maxLon) maxLon = point.longitude;
     }
 
-    final padding = 20.0;
+    const padding = 20.0;
     final drawWidth = size.width - padding * 2;
     final drawHeight = size.height - padding * 2;
 
@@ -362,6 +378,7 @@ class RoutePainter extends CustomPainter {
       final x = lonRange == 0
           ? drawWidth / 2
           : ((point.longitude - minLon) / lonRange) * drawWidth;
+
       final y = latRange == 0
           ? drawHeight / 2
           : ((maxLat - point.latitude) / latRange) * drawHeight;
@@ -369,7 +386,6 @@ class RoutePainter extends CustomPainter {
       return Offset(x + padding, y + padding);
     }
 
-    // Dibujar línea
     final linePaint = Paint()
       ..color = const Color(0xFF6366F1)
       ..strokeWidth = 4
@@ -378,7 +394,9 @@ class RoutePainter extends CustomPainter {
       ..strokeJoin = StrokeJoin.round;
 
     final path = Path();
-    path.moveTo(toPixel(route.points.first).dx, toPixel(route.points.first).dy);
+
+    final firstPixel = toPixel(route.points.first);
+    path.moveTo(firstPixel.dx, firstPixel.dy);
 
     for (int i = 1; i < route.points.length; i++) {
       final pixel = toPixel(route.points[i]);
@@ -387,11 +405,9 @@ class RoutePainter extends CustomPainter {
 
     canvas.drawPath(path, linePaint);
 
-    // Punto inicio (verde)
     final startPaint = Paint()..color = Colors.green;
     canvas.drawCircle(toPixel(route.points.first), 8, startPaint);
 
-    // Punto final (rojo)
     final endPaint = Paint()..color = Colors.red;
     canvas.drawCircle(toPixel(route.points.last), 8, endPaint);
   }
@@ -402,41 +418,29 @@ class RoutePainter extends CustomPainter {
   }
 }
 
-/// Filtro de Kalman unidimensional en tiempo real para Latitud y Longitud
-///
-/// EXPLICACIÓN DIDÁCTICA:
-/// - Reduce las oscilaciones (ruido estático de ±2-5m) del GPS al caminar en línea recta.
-/// - Ajusta dinámicamente el factor de suavizado en función de la precisión (accuracy) reportada.
-/// - Cuando la precisión del GPS es alta (R pequeño), confía en el nuevo punto.
-/// - Cuando la precisión es baja (R grande), suaviza más la coordenada apoyándose en el histórico.
 class GpsKalmanFilter {
   double? _lat;
   double? _lng;
   double _variance = -1.0;
 
-  // Ruido de proceso estimado por segundo en grados cuadrados.
-  // Equivale a ~2 metros de movimiento esperado por segundo: (2 / 111111.0)^2 ≈ 3.24e-10
-  static const double _processNoise = 3.24e-10;
+  static const double _processNoise = 8.0e-10;
 
   LocationPoint filter(LocationPoint point) {
     if (_lat == null || _lng == null || _variance < 0) {
       _lat = point.latitude;
       _lng = point.longitude;
-      _variance = (point.accuracy / 111111.0) * (point.accuracy / 111111.0);
+      _variance =
+          (point.accuracy / 111111.0) * (point.accuracy / 111111.0);
       return point;
     }
 
-    // Predicción del estado futuro (la incertidumbre/varianza aumenta por el ruido de proceso)
-    double predictedVariance = _variance + _processNoise;
+    final predictedVariance = _variance + _processNoise;
 
-    // Convertir precisión en metros a grados cuadrados para la varianza de medición (R)
-    double accuracyDegrees = point.accuracy / 111111.0;
-    double r = accuracyDegrees * accuracyDegrees;
+    final accuracyDegrees = point.accuracy / 111111.0;
+    final r = accuracyDegrees * accuracyDegrees;
 
-    // Calcular la Ganancia de Kalman (K)
-    double k = predictedVariance / (predictedVariance + r);
+    final k = predictedVariance / (predictedVariance + r);
 
-    // Actualizar estimación del estado (Latitud y Longitud)
     _lat = _lat! + k * (point.latitude - _lat!);
     _lng = _lng! + k * (point.longitude - _lng!);
     _variance = (1.0 - k) * predictedVariance;

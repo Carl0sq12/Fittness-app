@@ -9,6 +9,7 @@ Generado automáticamente por export_context_flutter.dart
 
 ✅ Feature "activity" contiene data/domain/presentation.
 ✅ Feature "auth" contiene data/domain/presentation.
+✅ Feature "history" contiene data/domain/presentation.
 
 
 # ESTRUCTURA DEL PROYECTO
@@ -183,6 +184,20 @@ Generado automáticamente por export_context_flutter.dart
                 📁 presentation
                     📁 widgets
                         📄 route_map_widget.dart
+        📁 history
+            📁 data
+                📁 repositories
+                    📄 activity_repository_impl.dart
+            📁 domain
+                📁 entities
+                    📄 activity_record.dart
+                📁 repositories
+                    📄 activity_repository.dart
+            📁 presentation
+                📁 bloc
+                    📄 history_bloc.dart
+                📁 pages
+                    📄 history_page.dart
     📄 injection_container.dart
     📄 main.dart
 📄 pubspec.yaml
@@ -197,7 +212,7 @@ Generado automáticamente por export_context_flutter.dart
 📄 ARCHIVO: .flutter-plugins-dependencies
 ================================================
 
-{"info":"This is a generated file; do not edit or check into version control.","plugins":{"ios":[{"name":"activity_recognition_flutter","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\activity_recognition_flutter-6.0.0\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"permission_handler_apple","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\permission_handler_apple-9.4.10\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"sensors_plus","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\sensors_plus-5.0.1\\\\","native_build":true,"dependencies":[],"dev_dependency":false}],"android":[{"name":"activity_recognition_flutter","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\activity_recognition_flutter-6.0.0\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"permission_handler_android","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\permission_handler_android-12.1.0\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"sensors_plus","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\sensors_plus-5.0.1\\\\","native_build":true,"dependencies":[],"dev_dependency":false}],"macos":[{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","native_build":true,"dependencies":[],"dev_dependency":false}],"linux":[],"windows":[{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"permission_handler_windows","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\permission_handler_windows-0.2.1\\\\","native_build":true,"dependencies":[],"dev_dependency":false}],"web":[{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","dependencies":[],"dev_dependency":false},{"name":"permission_handler_html","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\permission_handler_html-0.1.3+5\\\\","dependencies":[],"dev_dependency":false},{"name":"sensors_plus","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\sensors_plus-5.0.1\\\\","dependencies":[],"dev_dependency":false}]},"dependencyGraph":[{"name":"activity_recognition_flutter","dependencies":[]},{"name":"flutter_tts","dependencies":[]},{"name":"permission_handler","dependencies":["permission_handler_android","permission_handler_apple","permission_handler_html","permission_handler_windows"]},{"name":"permission_handler_android","dependencies":[]},{"name":"permission_handler_apple","dependencies":[]},{"name":"permission_handler_html","dependencies":[]},{"name":"permission_handler_windows","dependencies":[]},{"name":"sensors_plus","dependencies":[]}],"date_created":"2026-06-19 15:51:52.785846","version":"3.41.9","swift_package_manager_enabled":{"ios":false,"macos":false}}
+{"info":"This is a generated file; do not edit or check into version control.","plugins":{"ios":[{"name":"activity_recognition_flutter","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\activity_recognition_flutter-6.0.0\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"geolocator_apple","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\geolocator_apple-2.3.14\\\\","shared_darwin_source":true,"native_build":true,"dependencies":[],"dev_dependency":false},{"name":"local_auth_darwin","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\local_auth_darwin-1.6.1\\\\","shared_darwin_source":true,"native_build":true,"dependencies":[],"dev_dependency":false},{"name":"permission_handler_apple","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\permission_handler_apple-9.4.10\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"sensors_plus","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\sensors_plus-5.0.1\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"sqflite_darwin","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\sqflite_darwin-2.4.2\\\\","shared_darwin_source":true,"native_build":true,"dependencies":[],"dev_dependency":false}],"android":[{"name":"activity_recognition_flutter","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\activity_recognition_flutter-6.0.0\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"flutter_plugin_android_lifecycle","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_plugin_android_lifecycle-2.0.35\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"geolocator_android","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\geolocator_android-4.6.2\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"local_auth_android","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\local_auth_android-1.0.56\\\\","native_build":true,"dependencies":["flutter_plugin_android_lifecycle"],"dev_dependency":false},{"name":"permission_handler_android","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\permission_handler_android-12.1.0\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"sensors_plus","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\sensors_plus-5.0.1\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"sqflite_android","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\sqflite_android-2.4.2+3\\\\","native_build":true,"dependencies":[],"dev_dependency":false}],"macos":[{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"geolocator_apple","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\geolocator_apple-2.3.14\\\\","shared_darwin_source":true,"native_build":true,"dependencies":[],"dev_dependency":false},{"name":"local_auth_darwin","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\local_auth_darwin-1.6.1\\\\","shared_darwin_source":true,"native_build":true,"dependencies":[],"dev_dependency":false},{"name":"sqflite_darwin","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\sqflite_darwin-2.4.2\\\\","shared_darwin_source":true,"native_build":true,"dependencies":[],"dev_dependency":false}],"linux":[],"windows":[{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"geolocator_windows","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\geolocator_windows-0.2.5\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"local_auth_windows","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\local_auth_windows-1.0.11\\\\","native_build":true,"dependencies":[],"dev_dependency":false},{"name":"permission_handler_windows","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\permission_handler_windows-0.2.1\\\\","native_build":true,"dependencies":[],"dev_dependency":false}],"web":[{"name":"flutter_tts","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\flutter_tts-4.2.5\\\\","dependencies":[],"dev_dependency":false},{"name":"geolocator_web","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\geolocator_web-3.0.0\\\\","dependencies":[],"dev_dependency":false},{"name":"permission_handler_html","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\permission_handler_html-0.1.3+5\\\\","dependencies":[],"dev_dependency":false},{"name":"sensors_plus","path":"C:\\\\Users\\\\andre\\\\AppData\\\\Local\\\\Pub\\\\Cache\\\\hosted\\\\pub.dev\\\\sensors_plus-5.0.1\\\\","dependencies":[],"dev_dependency":false}]},"dependencyGraph":[{"name":"activity_recognition_flutter","dependencies":[]},{"name":"flutter_plugin_android_lifecycle","dependencies":[]},{"name":"flutter_tts","dependencies":[]},{"name":"geolocator","dependencies":["geolocator_android","geolocator_apple","geolocator_web","geolocator_windows"]},{"name":"geolocator_android","dependencies":[]},{"name":"geolocator_apple","dependencies":[]},{"name":"geolocator_web","dependencies":[]},{"name":"geolocator_windows","dependencies":[]},{"name":"local_auth","dependencies":["local_auth_android","local_auth_darwin","local_auth_windows"]},{"name":"local_auth_android","dependencies":["flutter_plugin_android_lifecycle"]},{"name":"local_auth_darwin","dependencies":[]},{"name":"local_auth_windows","dependencies":[]},{"name":"permission_handler","dependencies":["permission_handler_android","permission_handler_apple","permission_handler_html","permission_handler_windows"]},{"name":"permission_handler_android","dependencies":[]},{"name":"permission_handler_apple","dependencies":[]},{"name":"permission_handler_html","dependencies":[]},{"name":"permission_handler_windows","dependencies":[]},{"name":"sensors_plus","dependencies":[]},{"name":"sqflite","dependencies":["sqflite_android","sqflite_darwin"]},{"name":"sqflite_android","dependencies":[]},{"name":"sqflite_darwin","dependencies":[]}],"date_created":"2026-06-23 17:50:11.412839","version":"3.44.0","swift_package_manager_enabled":{"ios":false,"macos":false}}
 
           
 ================================================
@@ -620,13 +635,25 @@ You can also do it by opening your Flutter project's Xcode project with `open io
 
 /// Constantes para los nombres de Platform Channels
 /// Centralizar nombres evita errores de tipeo
-class PlatformChannels {
+//class PlatformChannels {
   // Prevenir instanciación
+ // PlatformChannels._();
+
+  //static const String biometric = 'com.tuinstituto.fitness/biometric';
+  //static const String accelerometer = 'com.tuinstituto.fitness/accelerometer';
+  //static const String gps = 'com.tuinstituto.fitness/gps';
+//}
+
+/// Archivo conservado por referencia histórica.
+/// Los Platform Channels han sido reemplazados por plugins:
+/// - local_auth       → autenticación biométrica
+/// - geolocator       → GPS y ubicación
+/// - sensors_plus     → acelerómetro
+class PlatformChannels {
   PlatformChannels._();
 
-  static const String biometric = 'com.tuinstituto.fitness/biometric';
-  static const String accelerometer = 'com.tuinstituto.fitness/accelerometer';
-  static const String gps = 'com.tuinstituto.fitness/gps';
+  // Ya no se usan activamente; eliminados biometric, accelerometer, gps.
+  // Si en el futuro se necesita un canal nativo personalizado, definirlo aquí.
 }
 
 
@@ -637,66 +664,69 @@ class PlatformChannels {
 
 import 'dart:async';
 import 'dart:math';
-import 'package:activity_recognition_flutter/activity_recognition_flutter.dart';
+
 import 'package:sensors_plus/sensors_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 import '../../domain/entities/activity_state.dart';
 import '../../domain/entities/fall_event.dart';
+import '../../../auth/domain/entities/step_data.dart' show ActivityType;
+import '../../../auth/data/datasources/accelerometer_datasource.dart';
+
+class ActivityUpdate {
+  final ActivityState state;
+  final int stepCount;
+  const ActivityUpdate({required this.state, required this.stepCount});
+}
 
 class ActivityDataSourceImpl {
-  // Umbral de caída: 25 m/s²
-  // Gravedad normal = 9.8. Un impacto real supera 20. 
-  // 25 da margen contra falsos positivos por movimiento brusco.
-  static const double _fallThreshold = 25.0;
+  final AccelerometerDataSource _accelerometerDataSource;
 
-  // Cooldown entre caídas: 2 segundos
-  // Evita múltiples eventos del mismo impacto (rebote del dispositivo)
-  static const Duration _fallCooldown = Duration(seconds: 2);
+  ActivityDataSourceImpl(this._accelerometerDataSource);
 
+  // Umbral reducido a 28.0: detecta caídas desde posición estática.
+  // El buffer de 3 muestras promediaba el pico y lo perdía → eliminado.
+  static const double _fallThreshold = 28.0;
+  static const Duration _fallCooldown = Duration(seconds: 3);
   DateTime? _lastFallTime;
 
-  // ─── STREAM DE ACTIVIDAD ──────────────────────────────────────────
-  // Usa activity_recognition_flutter que ya clasifica la actividad
-  // internamente usando el Step Detector del SO. Más preciso que
-  // procesar el acelerómetro crudo manualmente.
-  Stream<ActivityState> get activityStream {
-    return ActivityRecognition().activityStream().map((ActivityEvent event) {
-      final type = _mapActivityType(event.type);
-      return ActivityState(
-        type: type,
-        detectedAt: DateTime.now(),
+  Future<void> startTracking() async {
+    _accelerometerDataSource.resetStepCount();
+    await _accelerometerDataSource.startCounting();
+  }
+
+  Future<void> stopTracking() async {
+    await _accelerometerDataSource.stopCounting();
+  }
+
+  Stream<ActivityUpdate> get activityStream {
+    return _accelerometerDataSource.stepStream.map((stepData) {
+      UserActivityType type;
+      switch (stepData.activityType) {
+        case ActivityType.walking:
+          type = UserActivityType.walking;
+          break;
+        case ActivityType.running:
+          type = UserActivityType.running;
+          break;
+        case ActivityType.stationary:
+          type = UserActivityType.stationary;
+          break;
+      }
+      return ActivityUpdate(
+        state: ActivityState(type: type, detectedAt: DateTime.now()),
+        stepCount: stepData.stepCount,
       );
     });
   }
 
-  UserActivityType _mapActivityType(ActivityType pluginType) {
-    switch (pluginType) {
-      case ActivityType.walking:
-      case ActivityType.onFoot:
-        return UserActivityType.walking;
-      case ActivityType.running:
-        return UserActivityType.running;
-      case ActivityType.still:
-        return UserActivityType.stationary;
-      default:
-        return UserActivityType.unknown;
-    }
-  }
-
-  // ─── STREAM DE CAÍDAS ────────────────────────────────────────────
-  // Usa sensors_plus para datos crudos del acelerómetro.
-  // activity_recognition_flutter NO detecta caídas, por eso
-  // necesitamos los dos plugins.
   Stream<FallEvent> get fallStream {
     return accelerometerEventStream().where((AccelerometerEvent e) {
-      // Magnitud del vector resultante de los 3 ejes
+      // Sin buffer: evalúa cada muestra directamente para no perder el pico.
       final double magnitude = sqrt(e.x * e.x + e.y * e.y + e.z * e.z);
       final DateTime now = DateTime.now();
 
-      // Filtro 1: ¿supera el umbral de impacto?
       if (magnitude < _fallThreshold) return false;
 
-      // Filtro 2: cooldown para evitar eventos duplicados del mismo impacto
       if (_lastFallTime != null &&
           now.difference(_lastFallTime!) < _fallCooldown) {
         return false;
@@ -706,19 +736,13 @@ class ActivityDataSourceImpl {
       return true;
     }).map((AccelerometerEvent e) {
       final double magnitude = sqrt(e.x * e.x + e.y * e.y + e.z * e.z);
-      return FallEvent(
-        magnitude: magnitude,
-        occurredAt: DateTime.now(),
-      );
+      return FallEvent(magnitude: magnitude, occurredAt: DateTime.now());
     });
   }
 
-  // ─── PERMISOS ────────────────────────────────────────────────────
   Future<bool> requestPermissions() async {
-    // activityRecognition cubre el ACTIVITY_RECOGNITION del manifest
-    // sensors cubre el BODY_SENSORS del manifest
     final activity = await Permission.activityRecognition.request();
-    final sensors = await Permission.sensors.request();
+    final sensors  = await Permission.sensors.request();
     return activity.isGranted && sensors.isGranted;
   }
 }
@@ -732,15 +756,27 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 class TtsService {
   final FlutterTts _tts = FlutterTts();
+  bool _initialized = false;
 
+  /// Inicializa el motor TTS una sola vez.
+  /// Llamadas repetidas son ignoradas para evitar reinicializaciones
+  /// que silencian el audio en Android.
   Future<void> init() async {
+    if (_initialized) return;
     await _tts.setLanguage('es-ES');
     await _tts.setSpeechRate(0.5);
     await _tts.setVolume(1.0);
+    await _tts.setPitch(1.0);
+    // No bloquear el hilo mientras habla (importante en Android)
+    await _tts.awaitSpeakCompletion(false);
+    _initialized = true;
   }
 
+  /// Reproduce el texto en voz alta.
+  /// NO se llama stop() antes de speak() porque en Android eso silencia
+  /// el motor TTS antes de que pueda emitir audio.
   Future<void> speak(String text) async {
-    await _tts.stop();
+    if (text.isEmpty) return;
     await _tts.speak(text);
   }
 
@@ -839,106 +875,117 @@ import '../../data/datasources/activity_datasource_impl.dart';
 import '../../domain/entities/activity_state.dart';
 import '../../domain/entities/fall_event.dart';
 import '../../data/services/tts_service.dart';
+import '../../../history/domain/entities/activity_record.dart';
+import '../../../history/domain/repositories/activity_repository.dart';
 
-// ═══════════════════════════════════════════════════════════════
-// EVENTOS
-// ═══════════════════════════════════════════════════════════════
+// ═══ EVENTOS ════════════════════════════════════════════════════════
 
 abstract class ActivityEvent extends Equatable {
   @override
   List<Object?> get props => [];
 }
 
-/// El usuario presionó "Iniciar"
-class ActivityStarted extends ActivityEvent {}
+class ActivityStarted  extends ActivityEvent {}
+class ActivityStopped  extends ActivityEvent {}
 
-/// El usuario presionó "Detener"
-class ActivityStopped extends ActivityEvent {}
-
-/// Llegó un nuevo estado del stream de actividad
 class ActivityChanged extends ActivityEvent {
   final ActivityState state;
-  ActivityChanged(this.state);
-
+  final int stepCount;
+  ActivityChanged(this.state, this.stepCount);
   @override
-  List<Object?> get props => [state];
+  List<Object?> get props => [state, stepCount];
 }
 
-/// El acelerómetro detectó una caída
 class FallDetected extends ActivityEvent {
   final FallEvent event;
   FallDetected(this.event);
-
   @override
   List<Object?> get props => [event];
 }
 
-/// El usuario respondió "Estoy bien" en el diálogo
 class FallConfirmed extends ActivityEvent {}
+class FallDismissed  extends ActivityEvent {}
 
-/// El usuario respondió "Necesito ayuda" en el diálogo
-class FallDismissed extends ActivityEvent {}
-
-// ═══════════════════════════════════════════════════════════════
-// ESTADOS
-// ═══════════════════════════════════════════════════════════════
+// ═══ ESTADOS ════════════════════════════════════════════════════════
 
 abstract class ActivityBlocState extends Equatable {
   @override
   List<Object?> get props => [];
 }
 
-/// Estado inicial antes de iniciar el tracking
 class ActivityInitial extends ActivityBlocState {}
 
-/// Tracking activo con el estado actual del usuario
 class ActivityTracking extends ActivityBlocState {
   final ActivityState current;
-  ActivityTracking(this.current);
+  final int steps;
+  final double distanceKm;
+  final double calories;
+  final Duration elapsed;
+  final int fallCount; // ← NUEVO: caídas acumuladas en la sesión
+
+  ActivityTracking({
+    required this.current,
+    this.steps = 0,
+    this.distanceKm = 0,
+    this.calories = 0,
+    this.elapsed = Duration.zero,
+    this.fallCount = 0, // ← NUEVO
+  });
 
   @override
-  List<Object?> get props => [current];
+  List<Object?> get props =>
+      [current, steps, distanceKm, calories, elapsed, fallCount];
 }
 
-/// Se detectó una caída — la UI debe mostrar el diálogo
 class FallAlert extends ActivityBlocState {
   final FallEvent event;
   FallAlert(this.event);
-
   @override
   List<Object?> get props => [event];
 }
 
-/// El usuario confirmó que está bien — volver al tracking
 class FallResolved extends ActivityBlocState {}
 
-// ═══════════════════════════════════════════════════════════════
-// BLOC
-// ═══════════════════════════════════════════════════════════════
+class ActivitySessionSaved extends ActivityBlocState {
+  final ActivityRecord record;
+  ActivitySessionSaved(this.record);
+  @override
+  List<Object?> get props => [record];
+}
+
+// ═══ BLOC ════════════════════════════════════════════════════════════
 
 class ActivityBloc extends Bloc<ActivityEvent, ActivityBlocState> {
   final ActivityDataSourceImpl _dataSource;
   final TtsService _ttsService;
+  final ActivityRepository _repository;
 
-  StreamSubscription<ActivityState>? _activitySub;
+  StreamSubscription<ActivityUpdate>? _activitySub;
   StreamSubscription<FallEvent>? _fallSub;
+  Timer? _sessionTimer;
+  Timer? _debounceTimer;
 
-  // ── Debounce de voz ──────────────────────────────────────────
-  // Solo se anuncia un cambio si el nuevo estado se mantuvo
-  // estable durante 3 segundos y es diferente al último anunciado.
-  // Justificación: el acelerómetro oscila entre walking/stationary
-  // en milisegundos al dar un paso. 3s garantiza estabilidad real.
-  static const Duration _debounceDuration = Duration(seconds: 3);
+  DateTime? _sessionStart;
+  int _sessionSteps     = 0;
+  double _sessionDistanceKm = 0;
+  Duration _sessionElapsed  = Duration.zero;
+  int _sessionFallCount = 0; // ← NUEVO
+  final Map<UserActivityType, int> _activityCount = {};
 
+  // Último estado de tracking guardado para restaurar tras FallAlert
+  ActivityTracking? _lastTrackingState;
+
+  static const Duration _debounceDuration = Duration(milliseconds: 300);
   UserActivityType? _lastAnnouncedType;
   UserActivityType? _pendingType;
-  DateTime? _pendingStateTime;
 
   ActivityBloc({
     required ActivityDataSourceImpl dataSource,
     required TtsService ttsService,
+    required ActivityRepository repository,
   })  : _dataSource = dataSource,
         _ttsService = ttsService,
+        _repository = repository,
         super(ActivityInitial()) {
     on<ActivityStarted>(_onStarted);
     on<ActivityStopped>(_onStopped);
@@ -948,98 +995,227 @@ class ActivityBloc extends Bloc<ActivityEvent, ActivityBlocState> {
     on<FallDismissed>(_onFallDismissed);
   }
 
-  // ── Iniciar tracking ─────────────────────────────────────────
   Future<void> _onStarted(
     ActivityStarted event,
     Emitter<ActivityBlocState> emit,
   ) async {
+    final hasPermission = await _dataSource.requestPermissions();
+    if (!hasPermission) return;
+
     await _ttsService.init();
 
-    // Suscribirse al stream de actividad
-    _activitySub = _dataSource.activityStream.listen((activityState) {
-      add(ActivityChanged(activityState));
+    _sessionStart         = DateTime.now();
+    _sessionSteps         = 0;
+    _sessionDistanceKm    = 0;
+    _sessionElapsed       = Duration.zero;
+    _sessionFallCount     = 0; // ← NUEVO
+    _lastTrackingState    = null;
+    _activityCount.clear();
+
+    await _dataSource.startTracking();
+
+    final initial = ActivityTracking(
+      current: ActivityState(
+        type: UserActivityType.unknown,
+        detectedAt: DateTime.now(),
+      ),
+    );
+    _lastTrackingState = initial;
+    emit(initial);
+
+    _sessionTimer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (state is ActivityTracking) {
+        final current = state as ActivityTracking;
+        _sessionElapsed = DateTime.now().difference(_sessionStart!);
+        final updated = ActivityTracking(
+          current: current.current,
+          steps: _sessionSteps,
+          distanceKm: _sessionDistanceKm,
+          calories: _sessionSteps * 0.04,
+          elapsed: _sessionElapsed,
+          fallCount: _sessionFallCount, // ← NUEVO
+        );
+        _lastTrackingState = updated;
+        emit(updated);
+      }
     });
 
-    // Suscribirse al stream de caídas
+    _activitySub = _dataSource.activityStream.listen((update) {
+      add(ActivityChanged(update.state, update.stepCount));
+    });
+
     _fallSub = _dataSource.fallStream.listen((fallEvent) {
       add(FallDetected(fallEvent));
     });
   }
 
-  // ── Detener tracking ─────────────────────────────────────────
   Future<void> _onStopped(
     ActivityStopped event,
     Emitter<ActivityBlocState> emit,
   ) async {
     await _cancelSubscriptions();
+    await _dataSource.stopTracking();
+
+    if (_sessionStart == null) {
+      emit(ActivityInitial());
+      return;
+    }
+
+    final endTime = DateTime.now();
+    final duration = endTime.difference(_sessionStart!);
+
+    final dominant = _activityCount.entries.isEmpty
+        ? 'stationary'
+        : (_activityCount.entries
+              .reduce((a, b) => a.value >= b.value ? a : b)
+              .key
+              .name);
+
+    final record = ActivityRecord(
+      activityType: dominant,
+      steps: _sessionSteps,
+      distanceKm: _sessionDistanceKm,
+      calories: _sessionSteps * 0.04,
+      duration: duration,
+      startedAt: _sessionStart!,
+      endedAt: endTime,
+      fallCount: _sessionFallCount, // ← NUEVO
+    );
+
+    await _repository.insert(record);
+    emit(ActivitySessionSaved(record));
+
+    await Future<void>.delayed(const Duration(seconds: 2));
     emit(ActivityInitial());
   }
 
-  // ── Nuevo estado de actividad ─────────────────────────────────
   void _onActivityChanged(
     ActivityChanged event,
     Emitter<ActivityBlocState> emit,
   ) {
+    // Si hay un FallAlert activo, actualizar solo los contadores internos
+    // sin emitir estado para no pisar el diálogo.
     final incoming = event.state.type;
+    _sessionSteps      = event.stepCount;
+    _sessionDistanceKm = _sessionSteps * 0.00075;
 
-    if (incoming == _pendingType) {
-      // El estado sigue siendo el mismo — ¿ya pasaron 3 segundos?
-      final elapsed = DateTime.now().difference(_pendingStateTime!);
-      if (elapsed >= _debounceDuration) {
-        // Solo anunciar si cambió respecto al último anunciado
-        if (incoming != _lastAnnouncedType &&
-            incoming != UserActivityType.unknown) {
-          _ttsService.speak(event.state.voiceMessage);
-          _lastAnnouncedType = incoming;
-        }
-      }
-    } else {
-      // Estado diferente — reiniciar el contador de estabilidad
-      _pendingType = incoming;
-      _pendingStateTime = DateTime.now();
+    if (incoming != UserActivityType.unknown) {
+      _activityCount[incoming] = (_activityCount[incoming] ?? 0) + 1;
     }
 
-    emit(ActivityTracking(event.state));
+    if (state is FallAlert) return;
+
+    if (incoming != _pendingType) {
+      _debounceTimer?.cancel();
+      _pendingType = incoming;
+      if (incoming != UserActivityType.unknown) {
+        _debounceTimer = Timer(_debounceDuration, () {
+          final pending = _pendingType;
+          if (pending != null &&
+              pending != _lastAnnouncedType &&
+              pending != UserActivityType.unknown) {
+            _ttsService.speak(_voiceMessageFor(pending));
+            _lastAnnouncedType = pending;
+          }
+        });
+      }
+    }
+
+    final updated = ActivityTracking(
+      current: event.state,
+      steps: _sessionSteps,
+      distanceKm: _sessionDistanceKm,
+      calories: _sessionSteps * 0.04,
+      elapsed: _sessionElapsed,
+      fallCount: _sessionFallCount, // ← NUEVO
+    );
+    _lastTrackingState = updated;
+    emit(updated);
   }
 
-  // ── Caída detectada ──────────────────────────────────────────
   Future<void> _onFallDetected(
     FallDetected event,
     Emitter<ActivityBlocState> emit,
   ) async {
-    await _ttsService.speak('¡Atención! Se detectó una posible caída. ¿Estás bien?');
+    _sessionFallCount++; // ← NUEVO: contabilizar la caída
+    _debounceTimer?.cancel();
+    _pendingType = null;
+    await _ttsService.speak(
+        '¡Atención! Se detectó una posible caída. ¿Estás bien?');
     emit(FallAlert(event.event));
   }
 
-  // ── Usuario respondió "Estoy bien" ───────────────────────────
   Future<void> _onFallConfirmed(
     FallConfirmed event,
     Emitter<ActivityBlocState> emit,
   ) async {
-    await _ttsService.speak('Me alegra que estés bien. Continuando el seguimiento.');
-    emit(FallResolved());
+    await _ttsService.speak(
+        'Me alegra que estés bien. Continuando el seguimiento.');
+    // Restaurar el estado de tracking con el fallCount actualizado
+    if (_lastTrackingState != null) {
+      final restored = ActivityTracking(
+        current: _lastTrackingState!.current,
+        steps: _sessionSteps,
+        distanceKm: _sessionDistanceKm,
+        calories: _sessionSteps * 0.04,
+        elapsed: _sessionElapsed,
+        fallCount: _sessionFallCount,
+      );
+      _lastTrackingState = restored;
+      emit(restored);
+    } else {
+      emit(FallResolved());
+    }
   }
 
-  // ── Usuario respondió "Necesito ayuda" ───────────────────────
   Future<void> _onFallDismissed(
     FallDismissed event,
     Emitter<ActivityBlocState> emit,
   ) async {
-    await _ttsService.speak('Entendido. Por favor busca ayuda de inmediato.');
-    emit(FallResolved());
+    await _ttsService.speak(
+        'Entendido. Por favor busca ayuda de inmediato.');
+    if (_lastTrackingState != null) {
+      final restored = ActivityTracking(
+        current: _lastTrackingState!.current,
+        steps: _sessionSteps,
+        distanceKm: _sessionDistanceKm,
+        calories: _sessionSteps * 0.04,
+        elapsed: _sessionElapsed,
+        fallCount: _sessionFallCount,
+      );
+      _lastTrackingState = restored;
+      emit(restored);
+    } else {
+      emit(FallResolved());
+    }
   }
 
-  // ── Limpieza ──────────────────────────────────────────────────
+  String _voiceMessageFor(UserActivityType type) {
+    switch (type) {
+      case UserActivityType.walking:   return 'Estás caminando';
+      case UserActivityType.running:   return 'Estás corriendo';
+      case UserActivityType.stationary: return 'Te has detenido';
+      case UserActivityType.unknown:   return '';
+    }
+  }
+
   Future<void> _cancelSubscriptions() async {
+    _sessionTimer?.cancel();
+    _sessionTimer = null;
     await _activitySub?.cancel();
     await _fallSub?.cancel();
     _activitySub = null;
     _fallSub = null;
+    _debounceTimer?.cancel();
+    _debounceTimer = null;
+    _lastAnnouncedType = null;
+    _pendingType = null;
   }
 
   @override
   Future<void> close() async {
     await _cancelSubscriptions();
+    await _dataSource.stopTracking();
     _ttsService.dispose();
     return super.close();
   }
@@ -1055,6 +1231,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/activity_bloc.dart';
 import '../../domain/entities/activity_state.dart';
+import '../../data/datasources/activity_datasource_impl.dart';
+import '../../../../../injection_container.dart';
 
 class ActivityPage extends StatefulWidget {
   const ActivityPage({super.key});
@@ -1064,41 +1242,44 @@ class ActivityPage extends StatefulWidget {
 }
 
 class _ActivityPageState extends State<ActivityPage> {
-
   @override
   void initState() {
     super.initState();
     _requestPermissionsAndStart();
   }
 
-  // Paso 9: solicitar permisos antes de iniciar
   Future<void> _requestPermissionsAndStart() async {
-    final bloc = context.read<ActivityBloc>();
-    // El datasource ya está dentro del bloc, disparamos el evento
-    bloc.add(ActivityStarted());
+    final datasource = sl<ActivityDataSourceImpl>();
+    final granted = await datasource.requestPermissions();
+    if (!mounted) return;
+    if (granted) {
+      context.read<ActivityBloc>().add(ActivityStarted());
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            'Permisos denegados. Activa "Actividad física" y "Sensores corporales" en Ajustes.',
+          ),
+          backgroundColor: Colors.red,
+          duration: Duration(seconds: 6),
+        ),
+      );
+    }
   }
 
-  // ── Diálogo de caída ────────────────────────────────────────
   void _showFallDialog(BuildContext context, FallAlert state) {
     bool showSecondary = false;
     Timer? secondaryTimer;
 
     showDialog<void>(
       context: context,
-      barrierDismissible: false, // El usuario DEBE responder
+      barrierDismissible: false,
       builder: (dialogContext) {
         return StatefulBuilder(
           builder: (ctx, setDialogState) {
-
-            // Timer de 15 segundos para mensaje secundario
-            secondaryTimer ??= Timer(
-              const Duration(seconds: 15),
-              () {
-                setDialogState(() {
-                  showSecondary = true;
-                });
-              },
-            );
+            secondaryTimer ??= Timer(const Duration(seconds: 15), () {
+              setDialogState(() => showSecondary = true);
+            });
 
             return AlertDialog(
               title: const Row(
@@ -1114,8 +1295,6 @@ class _ActivityPageState extends State<ActivityPage> {
                 children: [
                   const Text('Se detectó una posible caída.'),
                   const SizedBox(height: 8),
-
-                  // Mensaje secundario que aparece a los 15 segundos
                   if (showSecondary)
                     Container(
                       padding: const EdgeInsets.all(10),
@@ -1127,15 +1306,12 @@ class _ActivityPageState extends State<ActivityPage> {
                       child: const Text(
                         '¡Por favor responde! ¿Necesitas ayuda?',
                         style: TextStyle(
-                          color: Colors.red,
-                          fontWeight: FontWeight.bold,
-                        ),
+                            color: Colors.red, fontWeight: FontWeight.bold),
                       ),
                     ),
                 ],
               ),
               actions: [
-                // Botón "Estoy bien"
                 TextButton(
                   onPressed: () {
                     secondaryTimer?.cancel();
@@ -1144,8 +1320,6 @@ class _ActivityPageState extends State<ActivityPage> {
                   },
                   child: const Text('Estoy bien'),
                 ),
-
-                // Botón "Necesito ayuda"
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
@@ -1174,68 +1348,215 @@ class _ActivityPageState extends State<ActivityPage> {
         backgroundColor: const Color(0xFF6366F1),
         foregroundColor: Colors.white,
       ),
+      resizeToAvoidBottomInset: false,
       body: BlocListener<ActivityBloc, ActivityBlocState>(
         listener: (context, state) {
-          // Cuando el BLoC emite FallAlert → mostrar el diálogo
           if (state is FallAlert) {
             _showFallDialog(context, state);
+          }
+          if (state is ActivitySessionSaved) {
+            ScaffoldMessenger.of(context)
+              ..clearSnackBars()
+              ..showSnackBar(
+                SnackBar(
+                  content: Row(
+                    children: [
+                      const Icon(Icons.check_circle, color: Colors.white),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          'Sesión guardada: ${state.record.steps} pasos · '
+                          '${state.record.distanceKm.toStringAsFixed(2)} km · '
+                          '${state.record.calories.toStringAsFixed(0)} cal'
+                          '${state.record.fallCount > 0 ? ' · ${state.record.fallCount} caída${state.record.fallCount > 1 ? 's' : ''}' : ''}',
+                        ),
+                      ),
+                    ],
+                  ),
+                  backgroundColor: Colors.green,
+                  duration: const Duration(seconds: 4),
+                  behavior: SnackBarBehavior.floating,
+                  margin: const EdgeInsets.only(
+                    left: 16,
+                    right: 16,
+                    bottom: 12,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+              );
           }
         },
         child: BlocBuilder<ActivityBloc, ActivityBlocState>(
           builder: (context, state) {
             return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+              child: Padding(
+                padding: const EdgeInsets.all(24),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(
+                      _getIcon(state),
+                      size: 100,
+                      color: const Color(0xFF6366F1),
+                    ),
+                    const SizedBox(height: 16),
 
-                  // Ícono según actividad
-                  Icon(
-                    _getIcon(state),
-                    size: 100,
-                    color: const Color(0xFF6366F1),
-                  ),
-                  const SizedBox(height: 24),
+                    Text(
+                      _getLabel(state),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                          fontSize: 28, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 32),
 
-                  // Texto del estado actual
-                  Text(
-                    _getLabel(state),
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 40),
+                    if (state is ActivityTracking) ...[
+                      _buildStatsRow(state),
+                      const SizedBox(height: 8),
+                      Text(
+                        '⏱ ${_formatDuration(state.elapsed)}',
+                        style:
+                            TextStyle(fontSize: 16, color: Colors.grey[600]),
+                      ),
+                      // Caídas detectadas en sesión, solo si hay al menos una
+                      if (state.fallCount > 0) ...[
+                        const SizedBox(height: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: Colors.orange.shade50,
+                            borderRadius: BorderRadius.circular(10),
+                            border:
+                                Border.all(color: Colors.orange.shade300),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.warning_amber_rounded,
+                                  size: 16,
+                                  color: Colors.orange.shade700),
+                              const SizedBox(width: 6),
+                              Text(
+                                '${state.fallCount} caída${state.fallCount > 1 ? 's' : ''} detectada${state.fallCount > 1 ? 's' : ''} en esta sesión',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.orange.shade700,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                      const SizedBox(height: 32),
+                    ],
 
-                  // Botón iniciar / detener
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      if (state is ActivityTracking) {
-                        context.read<ActivityBloc>().add(ActivityStopped());
-                      } else {
-                        context.read<ActivityBloc>().add(ActivityStarted());
-                      }
-                    },
-                    icon: Icon(
-                      state is ActivityTracking ? Icons.stop : Icons.play_arrow,
+                    if (state is ActivitySessionSaved) ...[
+                      Center(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(Icons.check_circle,
+                                color: Colors.green, size: 48),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Sesión guardada en historial',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 32),
+                    ],
+
+                    ElevatedButton.icon(
+                      onPressed: state is ActivitySessionSaved
+                          ? null
+                          : () {
+                              if (state is ActivityTracking) {
+                                context
+                                    .read<ActivityBloc>()
+                                    .add(ActivityStopped());
+                              } else {
+                                _requestPermissionsAndStart();
+                              }
+                            },
+                      icon: Icon(
+                        state is ActivityTracking
+                            ? Icons.stop
+                            : Icons.play_arrow,
+                      ),
+                      label: Text(
+                        state is ActivityTracking ? 'Detener' : 'Iniciar',
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: state is ActivityTracking
+                            ? Colors.red
+                            : Colors.green,
+                        foregroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 40, vertical: 16),
+                      ),
                     ),
-                    label: Text(
-                      state is ActivityTracking ? 'Detener' : 'Iniciar',
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: state is ActivityTracking
-                          ? Colors.red
-                          : Colors.green,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 32, vertical: 16),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             );
           },
         ),
       ),
+    );
+  }
+
+  Widget _buildStatsRow(ActivityTracking state) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        color: const Color(0xFF6366F1).withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _statItem(Icons.directions_walk, state.steps.toString(), 'pasos'),
+          _statItem(
+              Icons.straighten, state.distanceKm.toStringAsFixed(2), 'km'),
+          _statItem(Icons.local_fire_department,
+              state.calories.toStringAsFixed(0), 'cal'),
+          // Caídas en la fila de stats con ícono naranja para distinguirlo
+          _statItem(
+            Icons.warning_amber_rounded,
+            state.fallCount.toString(),
+            'caídas',
+            color: state.fallCount > 0
+                ? Colors.orange.shade700
+                : Colors.grey[400]!,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _statItem(IconData icon, String value, String label,
+      {Color? color}) {
+    final c = color ?? const Color(0xFF6366F1);
+    return Column(
+      children: [
+        Icon(icon, color: c, size: 20),
+        const SizedBox(height: 4),
+        Text(value,
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 18, color: c)),
+        Text(label,
+            style: TextStyle(fontSize: 11, color: Colors.grey[600])),
+      ],
     );
   }
 
@@ -1252,14 +1573,22 @@ class _ActivityPageState extends State<ActivityPage> {
           return Icons.help_outline;
       }
     }
+    if (state is ActivitySessionSaved) return Icons.check_circle;
     return Icons.fitness_center;
   }
 
   String _getLabel(ActivityBlocState state) {
-    if (state is ActivityTracking) {
-      return state.current.label;
-    }
+    if (state is ActivityTracking) return state.current.label;
+    if (state is ActivitySessionSaved) return 'Guardando...';
     return 'Presiona Iniciar';
+  }
+
+  String _formatDuration(Duration d) {
+    final h = d.inHours;
+    final m = d.inMinutes.remainder(60);
+    final s = d.inSeconds.remainder(60);
+    if (h > 0) return '${h}h ${m}m';
+    return '${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}';
   }
 }
 
@@ -1268,100 +1597,176 @@ class _ActivityPageState extends State<ActivityPage> {
 📄 ARCHIVO: lib\features\auth\data\datasources\accelerometer_datasource.dart
 ================================================
 
-import 'package:flutter/services.dart';
+import 'dart:async';
+import 'dart:math';
 import 'package:permission_handler/permission_handler.dart';
-import '../../../../core/platform/platform_channels.dart';
+import 'package:sensors_plus/sensors_plus.dart';
 import '../../domain/entities/step_data.dart';
 
-/// DataSource para acelerómetro usando EventChannel
-///
-/// - EventChannel se usa para STREAMS de datos continuos
-/// - A diferencia de MethodChannel (petición/respuesta),
-///   EventChannel envía datos constantemente
 abstract class AccelerometerDataSource {
   Stream<StepData> get stepStream;
   Future<void> startCounting();
   Future<void> stopCounting();
   Future<bool> requestPermissions();
+  void resetStepCount();
 }
 
 class AccelerometerDataSourceImpl implements AccelerometerDataSource {
-  /// EventChannel: para recibir stream de datos
-  final EventChannel _eventChannel = const EventChannel(
-    PlatformChannels.accelerometer
-  );
+  StreamSubscription<AccelerometerEvent>? _accelSub;
+  final StreamController<StepData> _controller =
+      StreamController<StepData>.broadcast();
 
-  /// MethodChannel auxiliar: para control (start/stop)
-  final MethodChannel _methodChannel = const MethodChannel(
-    '${PlatformChannels.accelerometer}/control'
-  );
+  int _stepCount = 0;
+  bool _aboveThreshold = false;
+  DateTime? _lastStepTime;
+
+  // Lista corta: solo para conteo en tiempo real (pasos visibles rápido).
+  final List<DateTime> _recentSteps = <DateTime>[];
+
+  // Lista separada: solo para clasificar actividad (más estable).
+  final List<DateTime> _classifySteps = <DateTime>[];
+
+  static const double _stepThresholdUp = 11.8;
+  static const double _stepThresholdDown = 10.2;
+  static const int _minMsBetweenSteps = 380;
+
+  // Ventana corta: pasos en tiempo real.
+  static const Duration _stepRateWindow = Duration(seconds: 2);
+
+  // Ventana larga SOLO para clasificar caminar/correr: más estable.
+  static const Duration _classifyWindow = Duration(seconds: 3);
+
+  // Original: estable para quieto vs caminar.
+  static const Duration _walkingHoldTime = Duration(milliseconds: 2500);
 
   @override
-  Stream<StepData> get stepStream {
-    /// receiveBroadcastStream(): crea un stream que recibe
-    /// datos continuamente desde el lado Android
-    return _eventChannel.receiveBroadcastStream().map((event) {
-      return StepData.fromMap(event as Map<dynamic, dynamic>);
-    });
+  Stream<StepData> get stepStream => _controller.stream;
+
+  @override
+  void resetStepCount() {
+    _stepCount = 0;
+    _aboveThreshold = false;
+    _lastStepTime = null;
+    _recentSteps.clear();
+    _classifySteps.clear();
   }
 
   @override
   Future<void> startCounting() async {
-    await _methodChannel.invokeMethod('start');
+    await _accelSub?.cancel();
+    _accelSub = null;
+
+    _accelSub = accelerometerEventStream(
+      samplingPeriod: SensorInterval.uiInterval,
+    ).listen((AccelerometerEvent e) {
+      final double mag = sqrt(e.x * e.x + e.y * e.y + e.z * e.z);
+      final DateTime now = DateTime.now();
+
+      final bool cooldownOk = _lastStepTime == null ||
+          now.difference(_lastStepTime!).inMilliseconds >= _minMsBetweenSteps;
+
+      if (mag > _stepThresholdUp && !_aboveThreshold && cooldownOk) {
+        _aboveThreshold = true;
+        _stepCount++;
+        _lastStepTime = now;
+        // Se agrega a ambas listas.
+        _recentSteps.add(now);
+        _classifySteps.add(now);
+      } else if (mag < _stepThresholdDown) {
+        _aboveThreshold = false;
+      }
+
+      // Limpia cada lista con su propia ventana.
+      _recentSteps.removeWhere(
+        (DateTime t) => now.difference(t) > _stepRateWindow,
+      );
+      _classifySteps.removeWhere(
+        (DateTime t) => now.difference(t) > _classifyWindow,
+      );
+
+      final ActivityType activity = _classifyActivity(now);
+      _controller.add(
+        StepData(
+          stepCount: _stepCount,
+          activityType: activity,
+          magnitude: mag,
+        ),
+      );
+    });
+  }
+
+  ActivityType _classifyActivity(DateTime now) {
+    if (_lastStepTime == null) {
+      return ActivityType.stationary;
+    }
+
+    final Duration sinceLastStep = now.difference(_lastStepTime!);
+    if (sinceLastStep > _walkingHoldTime) {
+      return ActivityType.stationary;
+    }
+
+    // Usa la ventana larga para clasificar: mucho más estable.
+    // Con 4s y pasos consistentes, un paso de más/menos no cambia nada.
+    final double stepsPerSecond =
+        _classifySteps.length / _classifyWindow.inSeconds;
+
+    // Con ventana de 4s el umbral baja un poco porque
+    // la tasa promediada es más real que con 2s.
+    if (stepsPerSecond >= 2.0) {
+      return ActivityType.running;
+    }
+
+    return ActivityType.walking;
   }
 
   @override
   Future<void> stopCounting() async {
-    await _methodChannel.invokeMethod('stop');
+    await _accelSub?.cancel();
+    _accelSub = null;
+    _recentSteps.clear();
+    _classifySteps.clear();
   }
 
   @override
   Future<bool> requestPermissions() async {
-    final activityStatus = await Permission.activityRecognition.request();
-    final sensorsStatus = await Permission.sensors.request();
-    return activityStatus.isGranted && sensorsStatus.isGranted;
+    final PermissionStatus activity =
+        await Permission.activityRecognition.request();
+    final PermissionStatus sensors = await Permission.sensors.request();
+    return activity.isGranted && sensors.isGranted;
+  }
+
+  void dispose() {
+    stopCounting();
+    _controller.close();
   }
 }
-
 
           
 ================================================
 📄 ARCHIVO: lib\features\auth\data\datasources\biometric_datasource.dart
 ================================================
 
-import 'package:flutter/services.dart';
-import '../../../../core/platform/platform_channels.dart';
+import 'package:local_auth/local_auth.dart';
 import '../../domain/entities/auth_result.dart';
 
-/// DataSource para autenticación biométrica usando Platform Channels
-/// - Este es el LADO FLUTTER del Platform Channel
-/// - Usamos MethodChannel porque es petición/respuesta
-/// - El nombre del canal DEBE coincidir con el lado Android
 abstract class BiometricDataSource {
   Future<bool> canAuthenticate();
   Future<AuthResult> authenticate();
 }
 
+/// Implementación con el plugin local_auth.
+/// Reemplaza completamente el MethodChannel anterior.
 class BiometricDataSourceImpl implements BiometricDataSource {
-  /// MethodChannel: canal de comunicación Flutter ↔ Android
-  /// El nombre debe ser exactamente igual en ambos lados
-  final MethodChannel _channel = const MethodChannel(
-    PlatformChannels.biometric
-  );
+  final LocalAuthentication _auth = LocalAuthentication();
 
   @override
   Future<bool> canAuthenticate() async {
     try {
-      /// invokeMethod: envía un mensaje a Android y espera respuesta
-      /// - Parámetro 1: nombre del método (debe coincidir en Android)
-      /// - Retorna: un Future con la respuesta
-      final result = await _channel.invokeMethod<bool>(
-        'checkBiometricSupport'
-      );
-
-      return result ?? false;
-    } on PlatformException catch (e) {
-      print('Error verificando biometría: ${e.message}');
+      // Verifica si el dispositivo soporta biometría Y tiene registros
+      final bool canCheck = await _auth.canCheckBiometrics;
+      final bool isSupported = await _auth.isDeviceSupported();
+      return canCheck && isSupported;
+    } catch (e) {
       return false;
     }
   }
@@ -1369,22 +1774,28 @@ class BiometricDataSourceImpl implements BiometricDataSource {
   @override
   Future<AuthResult> authenticate() async {
     try {
-      /// Llamamos al método 'authenticate' del lado Android
-      final result = await _channel.invokeMethod<bool>('authenticate');
+      final bool didAuthenticate = await _auth.authenticate(
+        localizedReason: 'Usa tu huella para ingresar a Fitness Tracker',
+        options: const AuthenticationOptions(
+          biometricOnly: false, // Permite PIN como fallback
+          stickyAuth: true,     // No cancela si el usuario sale de la app
+        ),
+      );
 
       return AuthResult(
-        success: result ?? false,
-        message: result == true ? 'Autenticación exitosa' : 'Autenticación fallida',
+        success: didAuthenticate,
+        message: didAuthenticate
+            ? 'Autenticación exitosa'
+            : 'Autenticación cancelada',
       );
-    } on PlatformException catch (e) {
+    } catch (e) {
       return AuthResult(
         success: false,
-        message: 'Error: ${e.message}',
+        message: 'Error de autenticación: $e',
       );
     }
   }
 }
-
 
           
 ================================================
@@ -1415,14 +1826,12 @@ class AuthResult extends Equatable {
 
 import 'package:equatable/equatable.dart';
 
-/// Tipos de actividad detectados
 enum ActivityType {
-  stationary,  // Quieto
-  walking,     // Caminando
-  running,     // Corriendo
+  stationary,
+  walking,
+  running,
 }
 
-/// Datos del acelerómetro
 class StepData extends Equatable {
   final int stepCount;
   final ActivityType activityType;
@@ -1434,13 +1843,10 @@ class StepData extends Equatable {
     required this.magnitude,
   });
 
-  /// Calorías estimadas (0.04 cal por paso)
   double get estimatedCalories => stepCount * 0.04;
 
-  /// Factory para crear desde Map del Platform Channel
   factory StepData.fromMap(Map<dynamic, dynamic> map) {
     final activityTypeString = map['activityType'] as String;
-
     return StepData(
       stepCount: map['stepCount'] as int,
       activityType: _parseActivityType(activityTypeString),
@@ -1462,7 +1868,6 @@ class StepData extends Equatable {
   @override
   List<Object> get props => [stepCount, activityType, magnitude];
 }
-
 
           
 ================================================
@@ -1666,6 +2071,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import '../../../data/datasources/accelerometer_datasource.dart';
 import '../../../domain/entities/step_data.dart';
+import '../../../../../injection_container.dart';
 
 /// Widget que muestra el contador de pasos
 ///
@@ -1680,7 +2086,7 @@ class StepCounterWidget extends StatefulWidget {
 }
 
 class _StepCounterWidgetState extends State<StepCounterWidget> {
-  final AccelerometerDataSource _dataSource = AccelerometerDataSourceImpl();
+  final AccelerometerDataSource _dataSource = sl<AccelerometerDataSource>();
 
   StreamSubscription<StepData>? _subscription;
   StepData? _currentData;
@@ -1815,7 +2221,7 @@ class _StepCounterWidgetState extends State<StepCounterWidget> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -1861,80 +2267,124 @@ class _StepCounterWidgetState extends State<StepCounterWidget> {
 📄 ARCHIVO: lib\features\auth\tracking\data\datasources\gps_datasource.dart
 ================================================
 
-import 'package:flutter/services.dart';
-import 'package:permission_handler/permission_handler.dart';
-import '../../../../../core/platform/platform_channels.dart';
-import '../../domain/entities/location_point.dart';
+import 'dart:async';
 
-/// DataSource para GPS
-///
-/// EXPLICACIÓN DIDÁCTICA:
-/// - Combina MethodChannel (operaciones puntuales)
-/// - Con EventChannel (stream de ubicaciones)
-/// abstract class GpsDataSource {
-///   Future<LocationPoint?> getCurrentLocation();
-///   Stream<LocationPoint> get locationStream;
-///   Future<bool> isGpsEnabled();
-///   Future<bool> requestPermissions();
-/// }
+import 'package:flutter/foundation.dart' show TargetPlatform, defaultTargetPlatform;
+import 'package:geolocator/geolocator.dart';
+
+import '../../domain/entities/location_point.dart';
 
 abstract class GpsDataSource {
   Future<LocationPoint?> getCurrentLocation();
   Stream<LocationPoint> get locationStream;
   Future<bool> isGpsEnabled();
   Future<bool> requestPermissions();
+  Future<bool> openLocationSettings();
 }
 
 class GpsDataSourceImpl implements GpsDataSource {
-  final MethodChannel _methodChannel = const MethodChannel(
-    PlatformChannels.gps
+  static const LocationSettings _locationSettings = LocationSettings(
+    accuracy: LocationAccuracy.best,
+    distanceFilter: 0,
+    timeLimit: Duration(seconds: 15),
   );
 
-  final EventChannel _eventChannel = const EventChannel(
-    '${PlatformChannels.gps}/stream'
-  );
+  static AndroidSettings get _androidSettings => AndroidSettings(
+        accuracy: LocationAccuracy.bestForNavigation,
+        distanceFilter: 0,
+        intervalDuration: const Duration(milliseconds: 300),
+        forceLocationManager: false,
+      );
+
+  static AppleSettings get _appleSettings => AppleSettings(
+        accuracy: LocationAccuracy.bestForNavigation,
+        activityType: ActivityType.fitness,
+        distanceFilter: 0,
+        pauseLocationUpdatesAutomatically: false,
+        showBackgroundLocationIndicator: true,
+      );
+
+  LocationSettings get _platformSettings {
+    if (defaultTargetPlatform == TargetPlatform.android) {
+      return _androidSettings;
+    } else if (defaultTargetPlatform == TargetPlatform.iOS) {
+      return _appleSettings;
+    }
+    return _locationSettings;
+  }
+
+  Stream<LocationPoint>? _sharedStream;
+
+  @override
+  Stream<LocationPoint> get locationStream {
+    _sharedStream ??= Geolocator.getPositionStream(
+      locationSettings: _platformSettings,
+    ).where((Position p) {
+      return p.accuracy <= 35.0;
+    }).map(_positionToPoint).asBroadcastStream();
+
+    return _sharedStream!;
+  }
 
   @override
   Future<LocationPoint?> getCurrentLocation() async {
     try {
-      final result = await _methodChannel.invokeMethod('getCurrentLocation');
-      if (result != null) {
-        return LocationPoint.fromMap(result as Map<dynamic, dynamic>);
-      }
-      return null;
-    } on PlatformException catch (e) {
-      print('Error obteniendo ubicación: ${e.message}');
+      final Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.bestForNavigation,
+        timeLimit: const Duration(seconds: 10),
+      );
+
+      if (position.accuracy > 35.0) return null;
+
+      return _positionToPoint(position);
+    } on TimeoutException {
+      final Position? last = await Geolocator.getLastKnownPosition();
+      if (last == null) return null;
+      if (last.accuracy > 35.0) return null;
+
+      return _positionToPoint(last);
+    } catch (_) {
       return null;
     }
-  }
-
-  @override
-  Stream<LocationPoint> get locationStream {
-    return _eventChannel.receiveBroadcastStream().map((event) {
-      return LocationPoint.fromMap(event as Map<dynamic, dynamic>);
-    });
   }
 
   @override
   Future<bool> isGpsEnabled() async {
-    try {
-      return await _methodChannel.invokeMethod('isGpsEnabled') ?? false;
-    } on PlatformException {
-      return false;
-    }
+    return Geolocator.isLocationServiceEnabled();
   }
 
   @override
   Future<bool> requestPermissions() async {
-    final locationStatus = await Permission.location.request();
-    if (!locationStatus.isGranted) {
-      final whenInUseStatus = await Permission.locationWhenInUse.request();
-      return whenInUseStatus.isGranted;
+    LocationPermission permission = await Geolocator.checkPermission();
+
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
     }
-    return locationStatus.isGranted;
+
+    if (permission == LocationPermission.deniedForever) {
+      return false;
+    }
+
+    return permission == LocationPermission.whileInUse ||
+        permission == LocationPermission.always;
+  }
+
+  @override
+  Future<bool> openLocationSettings() async {
+    return Geolocator.openLocationSettings();
+  }
+
+  LocationPoint _positionToPoint(Position p) {
+    return LocationPoint(
+      latitude: p.latitude,
+      longitude: p.longitude,
+      altitude: p.altitude,
+      speed: p.speed < 0 ? 0 : p.speed,
+      accuracy: p.accuracy,
+      timestamp: p.timestamp,
+    );
   }
 }
-
 
           
 ================================================
@@ -2047,11 +2497,12 @@ class Route {
 📄 ARCHIVO: lib\features\auth\tracking\presentation\widgets\route_map_widget.dart
 ================================================
 
-
 import 'package:flutter/material.dart' hide Route;
 import 'dart:async';
+
 import '../../data/datasources/gps_datasource.dart';
 import '../../domain/entities/location_point.dart';
+import '../../../../../injection_container.dart';
 
 class RouteMapWidget extends StatefulWidget {
   const RouteMapWidget({super.key});
@@ -2061,10 +2512,13 @@ class RouteMapWidget extends StatefulWidget {
 }
 
 class _RouteMapWidgetState extends State<RouteMapWidget> {
-  final GpsDataSource _dataSource = GpsDataSourceImpl();
-  final Route _route = Route();
+  final GpsDataSource _dataSource = sl<GpsDataSource>();
+
+  Route _route = Route();
+  GpsKalmanFilter _kalmanFilter = GpsKalmanFilter();
 
   StreamSubscription<LocationPoint>? _subscription;
+
   bool _isTracking = false;
   String _statusMessage = 'Presiona Iniciar';
 
@@ -2084,63 +2538,154 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
 
   Future<void> _startTracking() async {
     final hasPermission = await _dataSource.requestPermissions();
+
     if (!hasPermission) {
       setState(() {
         _statusMessage = 'Permisos denegados';
       });
+      _showPermissionDeniedDialog();
       return;
     }
 
     final gpsEnabled = await _dataSource.isGpsEnabled();
+
     if (!gpsEnabled) {
       setState(() {
-        _statusMessage = 'Activa el GPS';
+        _statusMessage = 'GPS desactivado';
       });
+
+      final shouldOpen = await _showGpsDisabledDialog();
+
+      if (shouldOpen) {
+        await _dataSource.openLocationSettings();
+      }
+
       return;
+    }
+
+    setState(() {
+      _route = Route();
+      _kalmanFilter = GpsKalmanFilter();
+      _isTracking = true;
+      _statusMessage = 'Buscando señal GPS...';
+    });
+
+    final initialPoint = await _dataSource.getCurrentLocation();
+
+    if (initialPoint != null && _isTracking && initialPoint.accuracy <= 35) {
+      final filteredInitial = _kalmanFilter.filter(initialPoint);
+
+      setState(() {
+        _route.addPoint(filteredInitial);
+        _statusMessage = 'Tracking - ${_route.points.length} puntos';
+      });
     }
 
     _subscription = _dataSource.locationStream.listen(
       (LocationPoint point) {
-        print('📍 GPS: ${point.latitude}, ${point.longitude}, acc=${point.accuracy}m');
+        if (point.accuracy > 35) {
+          return;
+        }
+
+        final filteredPoint = _kalmanFilter.filter(point);
 
         if (_route.points.isEmpty) {
           setState(() {
-            _route.addPoint(point);
+            _route.addPoint(filteredPoint);
             _statusMessage = 'Tracking - ${_route.points.length} puntos';
           });
-        } else {
-          final lastPoint = _route.points.last;
-          final distance = lastPoint.distanceTo(point);
+          return;
+        }
 
-          if (distance >= 2) {
-            setState(() {
-              _route.addPoint(point);
-              _statusMessage = 'Tracking - ${_route.points.length} puntos';
-            });
-          }
+        final lastPoint = _route.points.last;
+        final distance = lastPoint.distanceTo(filteredPoint);
+
+        if (distance >= 0.5) {
+          setState(() {
+            _route.addPoint(filteredPoint);
+            _statusMessage = 'Tracking - ${_route.points.length} puntos';
+          });
         }
       },
       onError: (Object error) {
-        print('❌ GPS Error: $error');
         setState(() {
           _statusMessage = 'Error: $error';
         });
       },
     );
-
-    setState(() {
-      _isTracking = true;
-    });
   }
 
   void _stopTracking() {
     _subscription?.cancel();
+    _subscription = null;
     _route.finish();
 
     setState(() {
       _isTracking = false;
       _statusMessage = 'Ruta finalizada';
     });
+  }
+
+  Future<bool> _showGpsDisabledDialog() async {
+    return await showDialog<bool>(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: const Row(
+                children: [
+                  Icon(Icons.location_off, color: Colors.red),
+                  SizedBox(width: 8),
+                  Text('GPS Desactivado'),
+                ],
+              ),
+              content: const Text(
+                'El servicio de ubicación está desactivado. Para registrar tu ruta, necesitas activarlo.',
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(false),
+                  child: const Text('Cancelar'),
+                ),
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(true),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF6366F1),
+                    foregroundColor: Colors.white,
+                  ),
+                  child: const Text('Activar'),
+                ),
+              ],
+            );
+          },
+        ) ??
+        false;
+  }
+
+  void _showPermissionDeniedDialog() {
+    showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Row(
+            children: [
+              Icon(Icons.security, color: Colors.red),
+              SizedBox(width: 8),
+              Text('Permiso Denegado'),
+            ],
+          ),
+          content: const Text(
+            'El permiso de ubicación es indispensable para trazar tu ruta. Actívalo en los ajustes de la aplicación.',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Aceptar'),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -2150,7 +2695,6 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Column(
         children: [
-          // Header
           Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -2161,7 +2705,10 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
                   children: [
                     const Text(
                       'Ruta GPS',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     ElevatedButton.icon(
                       onPressed: _toggleTracking,
@@ -2186,7 +2733,6 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
             ),
           ),
 
-          // Mapa (Canvas)
           Container(
             height: 200,
             margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -2206,7 +2752,6 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
 
           const SizedBox(height: 16),
 
-          // Métricas
           Padding(
             padding: const EdgeInsets.all(16),
             child: Row(
@@ -2229,7 +2774,7 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
                 ),
                 _buildMetric(
                   icon: Icons.local_fire_department,
-                  value: '${_route.estimatedCalories.toStringAsFixed(0)}',
+                  value: _route.estimatedCalories.toStringAsFixed(0),
                   label: 'Calorías',
                 ),
               ],
@@ -2249,8 +2794,20 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
       children: [
         Icon(icon, color: const Color(0xFF6366F1)),
         const SizedBox(height: 4),
-        Text(value, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-        Text(label, style: TextStyle(color: Colors.grey[600], fontSize: 12)),
+        Text(
+          value,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
+        Text(
+          label,
+          style: TextStyle(
+            color: Colors.grey[600],
+            fontSize: 12,
+          ),
+        ),
       ],
     );
   }
@@ -2263,11 +2820,11 @@ class _RouteMapWidgetState extends State<RouteMapWidget> {
     if (hours > 0) {
       return '${hours}h ${minutes}m';
     }
+
     return '${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}';
   }
 }
 
-/// CustomPainter para dibujar la ruta
 class RoutePainter extends CustomPainter {
   final Route route;
 
@@ -2283,7 +2840,9 @@ class RoutePainter extends CustomPainter {
         ),
         textDirection: TextDirection.ltr,
       );
+
       textPainter.layout();
+
       textPainter.paint(
         canvas,
         Offset(
@@ -2291,10 +2850,10 @@ class RoutePainter extends CustomPainter {
           (size.height - textPainter.height) / 2,
         ),
       );
+
       return;
     }
 
-    // Calcular bounds
     double minLat = route.points.first.latitude;
     double maxLat = route.points.first.latitude;
     double minLon = route.points.first.longitude;
@@ -2307,7 +2866,7 @@ class RoutePainter extends CustomPainter {
       if (point.longitude > maxLon) maxLon = point.longitude;
     }
 
-    final padding = 20.0;
+    const padding = 20.0;
     final drawWidth = size.width - padding * 2;
     final drawHeight = size.height - padding * 2;
 
@@ -2318,6 +2877,7 @@ class RoutePainter extends CustomPainter {
       final x = lonRange == 0
           ? drawWidth / 2
           : ((point.longitude - minLon) / lonRange) * drawWidth;
+
       final y = latRange == 0
           ? drawHeight / 2
           : ((maxLat - point.latitude) / latRange) * drawHeight;
@@ -2325,7 +2885,6 @@ class RoutePainter extends CustomPainter {
       return Offset(x + padding, y + padding);
     }
 
-    // Dibujar línea
     final linePaint = Paint()
       ..color = const Color(0xFF6366F1)
       ..strokeWidth = 4
@@ -2334,7 +2893,9 @@ class RoutePainter extends CustomPainter {
       ..strokeJoin = StrokeJoin.round;
 
     final path = Path();
-    path.moveTo(toPixel(route.points.first).dx, toPixel(route.points.first).dy);
+
+    final firstPixel = toPixel(route.points.first);
+    path.moveTo(firstPixel.dx, firstPixel.dy);
 
     for (int i = 1; i < route.points.length; i++) {
       final pixel = toPixel(route.points[i]);
@@ -2343,21 +2904,911 @@ class RoutePainter extends CustomPainter {
 
     canvas.drawPath(path, linePaint);
 
-    // Punto inicio (verde)
     final startPaint = Paint()..color = Colors.green;
     canvas.drawCircle(toPixel(route.points.first), 8, startPaint);
 
-    // Punto final (rojo)
     final endPaint = Paint()..color = Colors.red;
     canvas.drawCircle(toPixel(route.points.last), 8, endPaint);
   }
 
   @override
   bool shouldRepaint(RoutePainter oldDelegate) {
-    return oldDelegate.route.points.length != route.points.length;
+    return true;
   }
 }
 
+class GpsKalmanFilter {
+  double? _lat;
+  double? _lng;
+  double _variance = -1.0;
+
+  static const double _processNoise = 8.0e-10;
+
+  LocationPoint filter(LocationPoint point) {
+    if (_lat == null || _lng == null || _variance < 0) {
+      _lat = point.latitude;
+      _lng = point.longitude;
+      _variance =
+          (point.accuracy / 111111.0) * (point.accuracy / 111111.0);
+      return point;
+    }
+
+    final predictedVariance = _variance + _processNoise;
+
+    final accuracyDegrees = point.accuracy / 111111.0;
+    final r = accuracyDegrees * accuracyDegrees;
+
+    final k = predictedVariance / (predictedVariance + r);
+
+    _lat = _lat! + k * (point.latitude - _lat!);
+    _lng = _lng! + k * (point.longitude - _lng!);
+    _variance = (1.0 - k) * predictedVariance;
+
+    return LocationPoint(
+      latitude: _lat!,
+      longitude: _lng!,
+      altitude: point.altitude,
+      speed: point.speed,
+      accuracy: point.accuracy,
+      timestamp: point.timestamp,
+    );
+  }
+}
+
+          
+================================================
+📄 ARCHIVO: lib\features\history\data\repositories\activity_repository_impl.dart
+================================================
+
+import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart';
+import '../../domain/entities/activity_record.dart';
+import '../../domain/repositories/activity_repository.dart';
+
+class ActivityRepositoryImpl implements ActivityRepository {
+  static Database? _db;
+  static const String _tableName = 'activity_records';
+
+  Future<Database> get _database async {
+    if (_db != null) return _db!;
+    _db = await _initDb();
+    return _db!;
+  }
+
+  Future<Database> _initDb() async {
+    final dbPath = await getDatabasesPath();
+    final path = join(dbPath, 'fitness_tracker.db');
+
+    return await openDatabase(
+      path,
+      version: 2, // ← subir versión para migración
+      onCreate: (db, version) async {
+        await db.execute('''
+          CREATE TABLE $_tableName (
+            id              INTEGER PRIMARY KEY AUTOINCREMENT,
+            activityType    TEXT    NOT NULL,
+            steps           INTEGER NOT NULL DEFAULT 0,
+            distanceKm      REAL    NOT NULL DEFAULT 0,
+            calories        REAL    NOT NULL DEFAULT 0,
+            durationSeconds INTEGER NOT NULL DEFAULT 0,
+            startedAt       TEXT    NOT NULL,
+            endedAt         TEXT,
+            notes           TEXT,
+            fallCount       INTEGER NOT NULL DEFAULT 0
+          )
+        ''');
+      },
+      onUpgrade: (db, oldVersion, newVersion) async {
+        if (oldVersion < 2) {
+          // Agrega la columna a registros existentes sin borrar datos
+          await db.execute(
+            'ALTER TABLE $_tableName ADD COLUMN fallCount INTEGER NOT NULL DEFAULT 0',
+          );
+        }
+      },
+    );
+  }
+
+  @override
+  Future<int> insert(ActivityRecord record) async {
+    final db = await _database;
+    return await db.insert(
+      _tableName,
+      record.toMap(),
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  @override
+  Future<List<ActivityRecord>> getAll() async {
+    final db = await _database;
+    final maps = await db.query(_tableName, orderBy: 'startedAt DESC');
+    return maps.map((m) => ActivityRecord.fromMap(m)).toList();
+  }
+
+  @override
+  Future<ActivityRecord?> getById(int id) async {
+    final db = await _database;
+    final maps = await db.query(
+      _tableName,
+      where: 'id = ?',
+      whereArgs: [id],
+      limit: 1,
+    );
+    if (maps.isEmpty) return null;
+    return ActivityRecord.fromMap(maps.first);
+  }
+
+  @override
+  Future<int> update(ActivityRecord record) async {
+    final db = await _database;
+    return await db.update(
+      _tableName,
+      record.toMap(),
+      where: 'id = ?',
+      whereArgs: [record.id],
+    );
+  }
+
+  @override
+  Future<int> delete(int id) async {
+    final db = await _database;
+    return await db.delete(_tableName, where: 'id = ?', whereArgs: [id]);
+  }
+
+  @override
+  Future<void> deleteAll() async {
+    final db = await _database;
+    await db.delete(_tableName);
+  }
+}
+
+          
+================================================
+📄 ARCHIVO: lib\features\history\domain\entities\activity_record.dart
+================================================
+
+import 'package:equatable/equatable.dart';
+
+class ActivityRecord extends Equatable {
+  final int? id;
+  final String activityType;
+  final int steps;
+  final double distanceKm;
+  final double calories;
+  final Duration duration;
+  final DateTime startedAt;
+  final DateTime? endedAt;
+  final String? notes;
+  final int fallCount; // ← NUEVO
+
+  const ActivityRecord({
+    this.id,
+    required this.activityType,
+    required this.steps,
+    required this.distanceKm,
+    required this.calories,
+    required this.duration,
+    required this.startedAt,
+    this.endedAt,
+    this.notes,
+    this.fallCount = 0, // ← NUEVO
+  });
+
+  ActivityRecord copyWith({
+    int? id,
+    String? activityType,
+    int? steps,
+    double? distanceKm,
+    double? calories,
+    Duration? duration,
+    DateTime? startedAt,
+    DateTime? endedAt,
+    String? notes,
+    int? fallCount, // ← NUEVO
+  }) {
+    return ActivityRecord(
+      id: id ?? this.id,
+      activityType: activityType ?? this.activityType,
+      steps: steps ?? this.steps,
+      distanceKm: distanceKm ?? this.distanceKm,
+      calories: calories ?? this.calories,
+      duration: duration ?? this.duration,
+      startedAt: startedAt ?? this.startedAt,
+      endedAt: endedAt ?? this.endedAt,
+      notes: notes ?? this.notes,
+      fallCount: fallCount ?? this.fallCount, // ← NUEVO
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      if (id != null) 'id': id,
+      'activityType': activityType,
+      'steps': steps,
+      'distanceKm': distanceKm,
+      'calories': calories,
+      'durationSeconds': duration.inSeconds,
+      'startedAt': startedAt.toIso8601String(),
+      'endedAt': endedAt?.toIso8601String(),
+      'notes': notes,
+      'fallCount': fallCount, // ← NUEVO
+    };
+  }
+
+  factory ActivityRecord.fromMap(Map<String, dynamic> map) {
+    return ActivityRecord(
+      id: map['id'] as int?,
+      activityType: map['activityType'] as String,
+      steps: map['steps'] as int,
+      distanceKm: (map['distanceKm'] as num).toDouble(),
+      calories: (map['calories'] as num).toDouble(),
+      duration: Duration(seconds: map['durationSeconds'] as int),
+      startedAt: DateTime.parse(map['startedAt'] as String),
+      endedAt: map['endedAt'] != null
+          ? DateTime.parse(map['endedAt'] as String)
+          : null,
+      notes: map['notes'] as String?,
+      fallCount: (map['fallCount'] as int?) ?? 0, // ← NUEVO
+    );
+  }
+
+  String get formattedDuration {
+    final h = duration.inHours;
+    final m = duration.inMinutes.remainder(60);
+    final s = duration.inSeconds.remainder(60);
+    if (h > 0) return '${h}h ${m}m';
+    return '${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}';
+  }
+
+  String get activityLabel {
+    switch (activityType) {
+      case 'walking': return 'Caminata';
+      case 'running': return 'Carrera';
+      default:        return 'Actividad';
+    }
+  }
+
+  @override
+  List<Object?> get props => [
+    id, activityType, steps, distanceKm, calories,
+    duration, startedAt, endedAt, notes, fallCount,
+  ];
+}
+
+          
+================================================
+📄 ARCHIVO: lib\features\history\domain\repositories\activity_repository.dart
+================================================
+
+import '../entities/activity_record.dart';
+
+abstract class ActivityRepository {
+  Future<int> insert(ActivityRecord record);
+  Future<List<ActivityRecord>> getAll();
+  Future<ActivityRecord?> getById(int id);
+  Future<int> update(ActivityRecord record);
+  Future<int> delete(int id);
+  Future<void> deleteAll();
+}
+
+          
+================================================
+📄 ARCHIVO: lib\features\history\presentation\bloc\history_bloc.dart
+================================================
+
+import 'dart:async';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:equatable/equatable.dart';
+import '../../domain/entities/activity_record.dart';
+import '../../domain/repositories/activity_repository.dart';
+
+// ═══════════════════════════════════════════════════════════════
+// EVENTOS
+// ═══════════════════════════════════════════════════════════════
+
+abstract class HistoryEvent extends Equatable {
+  @override
+  List<Object?> get props => [];
+}
+
+class HistoryLoadRequested extends HistoryEvent {}
+
+class HistoryRecordAdded extends HistoryEvent {
+  final ActivityRecord record;
+  HistoryRecordAdded(this.record);
+  @override
+  List<Object?> get props => [record];
+}
+
+class HistoryRecordUpdated extends HistoryEvent {
+  final ActivityRecord record;
+  HistoryRecordUpdated(this.record);
+  @override
+  List<Object?> get props => [record];
+}
+
+class HistoryRecordDeleted extends HistoryEvent {
+  final int id;
+  HistoryRecordDeleted(this.id);
+  @override
+  List<Object?> get props => [id];
+}
+
+class HistoryAllDeleted extends HistoryEvent {}
+
+// ═══════════════════════════════════════════════════════════════
+// ESTADOS
+// ═══════════════════════════════════════════════════════════════
+
+abstract class HistoryState extends Equatable {
+  const HistoryState();
+  @override
+  List<Object?> get props => [];
+}
+
+class HistoryInitial extends HistoryState {
+  const HistoryInitial();
+}
+
+class HistoryLoading extends HistoryState {
+  const HistoryLoading();
+}
+
+class HistoryLoaded extends HistoryState {
+  final List<ActivityRecord> records;
+  const HistoryLoaded(this.records);
+  @override
+  List<Object?> get props => [records];
+}
+
+class HistoryError extends HistoryState {
+  final String message;
+  const HistoryError(this.message);
+  @override
+  List<Object?> get props => [message];
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BLOC
+// ═══════════════════════════════════════════════════════════════
+
+class HistoryBloc extends Bloc<HistoryEvent, HistoryState> {
+  final ActivityRepository _repository;
+
+  HistoryBloc(this._repository) : super(const HistoryInitial()) {
+    on<HistoryLoadRequested>(_onLoad);
+    on<HistoryRecordAdded>(_onAdd);
+    on<HistoryRecordUpdated>(_onUpdate);
+    on<HistoryRecordDeleted>(_onDelete);
+    on<HistoryAllDeleted>(_onDeleteAll);
+  }
+
+  Future<void> _onLoad(
+    HistoryLoadRequested event,
+    Emitter<HistoryState> emit,
+  ) async {
+    emit(const HistoryLoading());
+    try {
+      final records = await _repository.getAll();
+      emit(HistoryLoaded(records));
+    } catch (e) {
+      emit(HistoryError(e.toString()));
+    }
+  }
+
+  Future<void> _onAdd(
+    HistoryRecordAdded event,
+    Emitter<HistoryState> emit,
+  ) async {
+    try {
+      await _repository.insert(event.record);
+      final records = await _repository.getAll();
+      emit(HistoryLoaded(records));
+    } catch (e) {
+      emit(HistoryError(e.toString()));
+    }
+  }
+
+  Future<void> _onUpdate(
+    HistoryRecordUpdated event,
+    Emitter<HistoryState> emit,
+  ) async {
+    try {
+      await _repository.update(event.record);
+      final records = await _repository.getAll();
+      emit(HistoryLoaded(records));
+    } catch (e) {
+      emit(HistoryError(e.toString()));
+    }
+  }
+
+  Future<void> _onDelete(
+    HistoryRecordDeleted event,
+    Emitter<HistoryState> emit,
+  ) async {
+    try {
+      await _repository.delete(event.id);
+      final records = await _repository.getAll();
+      emit(HistoryLoaded(records));
+    } catch (e) {
+      emit(HistoryError(e.toString()));
+    }
+  }
+
+  Future<void> _onDeleteAll(
+    HistoryAllDeleted event,
+    Emitter<HistoryState> emit,
+  ) async {
+    try {
+      await _repository.deleteAll();
+      emit(const HistoryLoaded([]));
+    } catch (e) {
+      emit(HistoryError(e.toString()));
+    }
+  }
+}
+
+          
+================================================
+📄 ARCHIVO: lib\features\history\presentation\pages\history_page.dart
+================================================
+
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../bloc/history_bloc.dart';
+import '../../domain/entities/activity_record.dart';
+
+class HistoryPage extends StatefulWidget {
+  const HistoryPage({super.key});
+
+  @override
+  State<HistoryPage> createState() => _HistoryPageState();
+}
+
+class _HistoryPageState extends State<HistoryPage> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<HistoryBloc>().add(HistoryLoadRequested());
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Historial de Actividad'),
+        backgroundColor: const Color(0xFF6366F1),
+        foregroundColor: Colors.white,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.delete_sweep),
+            tooltip: 'Borrar todo',
+            onPressed: () => _confirmDeleteAll(context),
+          ),
+          IconButton(
+            icon: const Icon(Icons.add),
+            tooltip: 'Agregar registro',
+            onPressed: () => _showRecordDialog(context, null),
+          ),
+        ],
+      ),
+      body: BlocBuilder<HistoryBloc, HistoryState>(
+        builder: (context, state) {
+          if (state is HistoryLoading) {
+            return const Center(child: CircularProgressIndicator());
+          }
+
+          if (state is HistoryError) {
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.error_outline, color: Colors.red, size: 48),
+                  const SizedBox(height: 16),
+                  Text(state.message, textAlign: TextAlign.center),
+                  TextButton(
+                    onPressed: () => context
+                        .read<HistoryBloc>()
+                        .add(HistoryLoadRequested()),
+                    child: const Text('Reintentar'),
+                  ),
+                ],
+              ),
+            );
+          }
+
+          if (state is HistoryLoaded) {
+            if (state.records.isEmpty) {
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.history, size: 80, color: Colors.grey[300]),
+                    const SizedBox(height: 16),
+                    Text(
+                      'Sin registros aún',
+                      style: TextStyle(fontSize: 18, color: Colors.grey[500]),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      'Usa el Detector de Actividad para registrar sesiones automáticamente',
+                      style: TextStyle(color: Colors.grey[400]),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              );
+            }
+
+            return Column(
+              children: [
+                _buildSummaryCard(state.records),
+                Expanded(
+                  child: ListView.builder(
+                    padding: const EdgeInsets.all(12),
+                    itemCount: state.records.length,
+                    itemBuilder: (context, index) {
+                      return _buildRecordCard(context, state.records[index]);
+                    },
+                  ),
+                ),
+              ],
+            );
+          }
+
+          return const SizedBox.shrink();
+        },
+      ),
+    );
+  }
+
+  // ── Tarjeta de resumen ────────────────────────────────────────────
+  Widget _buildSummaryCard(List<ActivityRecord> records) {
+    final totalSteps    = records.fold(0,   (sum, r) => sum + r.steps);
+    final totalKm       = records.fold(0.0, (sum, r) => sum + r.distanceKm);
+    final totalCalories = records.fold(0.0, (sum, r) => sum + r.calories);
+    final totalFalls    = records.fold(0,   (sum, r) => sum + r.fallCount); // ← NUEVO
+
+    return Container(
+      margin: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFF6366F1), Color(0xFF8B5CF6)],
+        ),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _summaryItem(Icons.directions_walk, totalSteps.toString(), 'Pasos'),
+          _summaryItem(Icons.straighten,
+              '${totalKm.toStringAsFixed(1)} km', 'Distancia'),
+          _summaryItem(Icons.local_fire_department,
+              totalCalories.toStringAsFixed(0), 'Calorías'),
+          _summaryItem(Icons.event_note, records.length.toString(), 'Sesiones'),
+          // ← NUEVO: total de caídas en todas las sesiones
+          _summaryItem(
+            Icons.warning_amber_rounded,
+            totalFalls.toString(),
+            'Caídas',
+            color: totalFalls > 0 ? Colors.orange.shade200 : Colors.white70,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _summaryItem(IconData icon, String value, String label,
+      {Color? color}) {
+    final c = color ?? Colors.white70;
+    return Column(
+      children: [
+        Icon(icon, color: c, size: 20),
+        const SizedBox(height: 4),
+        Text(value,
+            style: TextStyle(
+                color: color != null ? color : Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 16)),
+        Text(label,
+            style: const TextStyle(color: Colors.white70, fontSize: 11)),
+      ],
+    );
+  }
+
+  // ── Tarjeta de cada registro ──────────────────────────────────────
+  Widget _buildRecordCard(BuildContext context, ActivityRecord record) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 10),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      elevation: 3,
+      child: ListTile(
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        leading: CircleAvatar(
+          backgroundColor: const Color(0xFF6366F1).withValues(alpha: 0.1),
+          child: Icon(
+            _activityIcon(record.activityType),
+            color: const Color(0xFF6366F1),
+          ),
+        ),
+        title: Text(
+          record.activityLabel,
+          style: const TextStyle(fontWeight: FontWeight.bold),
+        ),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 4),
+            Text(
+              '${record.steps} pasos · '
+              '${record.distanceKm.toStringAsFixed(2)} km · '
+              '${record.calories.toStringAsFixed(0)} cal',
+              style: const TextStyle(fontSize: 12),
+            ),
+            Text(
+              '⏱ ${record.formattedDuration} · '
+              '${_formatDate(record.startedAt)}',
+              style: TextStyle(fontSize: 11, color: Colors.grey[600]),
+            ),
+            // ← NUEVO: badge de caídas, solo si hubo al menos una
+            if (record.fallCount > 0) ...[
+              const SizedBox(height: 4),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 8, vertical: 3),
+                decoration: BoxDecoration(
+                  color: Colors.orange.shade50,
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: Colors.orange.shade300),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.warning_amber_rounded,
+                        size: 13, color: Colors.orange.shade700),
+                    const SizedBox(width: 4),
+                    Text(
+                      '${record.fallCount} caída${record.fallCount > 1 ? 's' : ''} '
+                      'detectada${record.fallCount > 1 ? 's' : ''}',
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: Colors.orange.shade700,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+            if (record.notes != null && record.notes!.isNotEmpty) ...[
+              const SizedBox(height: 2),
+              Text(
+                '📝 ${record.notes}',
+                style: TextStyle(
+                    fontSize: 11,
+                    color: Colors.grey[500],
+                    fontStyle: FontStyle.italic),
+              ),
+            ],
+          ],
+        ),
+        trailing: PopupMenuButton<String>(
+          onSelected: (value) {
+            if (value == 'edit') _showRecordDialog(context, record);
+            if (value == 'delete') _confirmDelete(context, record);
+          },
+          itemBuilder: (_) => [
+            const PopupMenuItem(value: 'edit',   child: Text('Editar')),
+            const PopupMenuItem(value: 'delete', child: Text('Eliminar')),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // ── Diálogo de Crear / Editar ─────────────────────────────────────
+  void _showRecordDialog(BuildContext context, ActivityRecord? existing) {
+    final isEditing = existing != null;
+
+    String selectedType = existing?.activityType ?? 'walking';
+    final stepsCtrl     = TextEditingController(
+        text: existing?.steps.toString() ?? '0');
+    final distanceCtrl  = TextEditingController(
+        text: existing?.distanceKm.toStringAsFixed(2) ?? '0');
+    final caloriesCtrl  = TextEditingController(
+        text: existing?.calories.toStringAsFixed(0) ?? '0');
+    final durationCtrl  = TextEditingController(
+        text: existing?.duration.inMinutes.toString() ?? '0');
+    final notesCtrl     = TextEditingController(text: existing?.notes ?? '');
+
+    showDialog<void>(
+      context: context,
+      builder: (dialogCtx) {
+        return StatefulBuilder(
+          builder: (ctx, setDialogState) {
+            return AlertDialog(
+              title: Text(isEditing ? 'Editar Registro' : 'Nuevo Registro'),
+              content: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    DropdownButtonFormField<String>(
+                      initialValue: selectedType,
+                      decoration: const InputDecoration(
+                        labelText: 'Tipo de actividad',
+                        border: OutlineInputBorder(),
+                      ),
+                      items: const [
+                        DropdownMenuItem(
+                            value: 'walking', child: Text('Caminata')),
+                        DropdownMenuItem(
+                            value: 'running', child: Text('Carrera')),
+                        DropdownMenuItem(
+                            value: 'stationary',
+                            child: Text('Ejercicio estático')),
+                      ],
+                      onChanged: (v) =>
+                          setDialogState(() => selectedType = v!),
+                    ),
+                    const SizedBox(height: 12),
+                    _dialogField(stepsCtrl, 'Pasos',
+                        keyboardType: TextInputType.number),
+                    const SizedBox(height: 12),
+                    _dialogField(distanceCtrl, 'Distancia (km)',
+                        keyboardType: const TextInputType.numberWithOptions(
+                            decimal: true)),
+                    const SizedBox(height: 12),
+                    _dialogField(caloriesCtrl, 'Calorías',
+                        keyboardType: const TextInputType.numberWithOptions(
+                            decimal: true)),
+                    const SizedBox(height: 12),
+                    _dialogField(durationCtrl, 'Duración (minutos)',
+                        keyboardType: TextInputType.number),
+                    const SizedBox(height: 12),
+                    _dialogField(notesCtrl, 'Notas (opcional)',
+                        maxLines: 2),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(dialogCtx),
+                  child: const Text('Cancelar'),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF6366F1),
+                    foregroundColor: Colors.white,
+                  ),
+                  onPressed: () {
+                    final record = ActivityRecord(
+                      id: existing?.id,
+                      activityType: selectedType,
+                      steps: int.tryParse(stepsCtrl.text) ?? 0,
+                      distanceKm: double.tryParse(distanceCtrl.text) ?? 0,
+                      calories: double.tryParse(caloriesCtrl.text) ?? 0,
+                      duration: Duration(
+                          minutes: int.tryParse(durationCtrl.text) ?? 0),
+                      startedAt: existing?.startedAt ?? DateTime.now(),
+                      endedAt: existing?.endedAt,
+                      notes: notesCtrl.text.isEmpty ? null : notesCtrl.text,
+                      // Al editar manualmente se conservan las caídas originales
+                      fallCount: existing?.fallCount ?? 0,
+                    );
+
+                    if (isEditing) {
+                      context
+                          .read<HistoryBloc>()
+                          .add(HistoryRecordUpdated(record));
+                    } else {
+                      context
+                          .read<HistoryBloc>()
+                          .add(HistoryRecordAdded(record));
+                    }
+
+                    Navigator.pop(dialogCtx);
+                  },
+                  child: Text(isEditing ? 'Guardar' : 'Agregar'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
+  Widget _dialogField(
+    TextEditingController ctrl,
+    String label, {
+    TextInputType keyboardType = TextInputType.text,
+    int maxLines = 1,
+  }) {
+    return TextField(
+      controller: ctrl,
+      keyboardType: keyboardType,
+      maxLines: maxLines,
+      decoration: InputDecoration(
+        labelText: label,
+        border: const OutlineInputBorder(),
+        isDense: true,
+      ),
+    );
+  }
+
+  // ── Confirmación de eliminación ───────────────────────────────────
+  void _confirmDelete(BuildContext context, ActivityRecord record) {
+    showDialog<void>(
+      context: context,
+      builder: (dialogCtx) => AlertDialog(
+        title: const Text('Eliminar registro'),
+        content: Text(
+            '¿Eliminar la sesión del ${_formatDate(record.startedAt)}?'),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(dialogCtx),
+              child: const Text('Cancelar')),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red, foregroundColor: Colors.white),
+            onPressed: () {
+              context
+                  .read<HistoryBloc>()
+                  .add(HistoryRecordDeleted(record.id!));
+              Navigator.pop(dialogCtx);
+            },
+            child: const Text('Eliminar'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _confirmDeleteAll(BuildContext context) {
+    showDialog<void>(
+      context: context,
+      builder: (dialogCtx) => AlertDialog(
+        title: const Text('Borrar todo el historial'),
+        content:
+            const Text('¿Estás seguro? Esta acción no se puede deshacer.'),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(dialogCtx),
+              child: const Text('Cancelar')),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red, foregroundColor: Colors.white),
+            onPressed: () {
+              context.read<HistoryBloc>().add(HistoryAllDeleted());
+              Navigator.pop(dialogCtx);
+            },
+            child: const Text('Borrar todo'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ── Helpers ───────────────────────────────────────────────────────
+  IconData _activityIcon(String type) {
+    switch (type) {
+      case 'walking': return Icons.directions_walk;
+      case 'running': return Icons.directions_run;
+      default:        return Icons.accessibility_new;
+    }
+  }
+
+  String _formatDate(DateTime dt) {
+    return '${dt.day.toString().padLeft(2, '0')}/'
+        '${dt.month.toString().padLeft(2, '0')}/'
+        '${dt.year} '
+        '${dt.hour.toString().padLeft(2, '0')}:'
+        '${dt.minute.toString().padLeft(2, '0')}';
+  }
+}
 
           
 ================================================
@@ -2368,24 +3819,45 @@ import 'package:get_it/get_it.dart';
 import 'features/activity/data/datasources/activity_datasource_impl.dart';
 import 'features/activity/data/services/tts_service.dart';
 import 'features/activity/presentation/bloc/activity_bloc.dart';
+import 'features/auth/data/datasources/accelerometer_datasource.dart';
+import 'features/auth/tracking/data/datasources/gps_datasource.dart';
+import 'features/history/data/repositories/activity_repository_impl.dart';
+import 'features/history/domain/repositories/activity_repository.dart';
+import 'features/history/presentation/bloc/history_bloc.dart';
 
 final sl = GetIt.instance;
 
 void initDependencies() {
-  // Servicios
+  // ── Servicios ────────────────────────────────────────────────────
   sl.registerLazySingleton<TtsService>(() => TtsService());
 
-  // Datasources
+  // ── Datasources ──────────────────────────────────────────────────
+  sl.registerLazySingleton<AccelerometerDataSource>(
+    () => AccelerometerDataSourceImpl(),
+  );
+  sl.registerLazySingleton<GpsDataSource>(
+    () => GpsDataSourceImpl(),
+  );
   sl.registerLazySingleton<ActivityDataSourceImpl>(
-    () => ActivityDataSourceImpl(),
+    () => ActivityDataSourceImpl(sl<AccelerometerDataSource>()),
   );
 
-  // BLoCs
+  // ── Repositorio CRUD ─────────────────────────────────────────────
+  sl.registerLazySingleton<ActivityRepository>(
+    () => ActivityRepositoryImpl(),
+  );
+
+  // ── BLoCs ────────────────────────────────────────────────────────
   sl.registerFactory<ActivityBloc>(
     () => ActivityBloc(
       dataSource: sl<ActivityDataSourceImpl>(),
       ttsService: sl<TtsService>(),
+      repository: sl<ActivityRepository>(), // ← línea añadida
     ),
+  );
+
+  sl.registerFactory<HistoryBloc>(
+    () => HistoryBloc(sl<ActivityRepository>()),
   );
 }
 
@@ -2398,22 +3870,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'injection_container.dart';
 
-// Auth (lo que ya tenías)
 import 'features/auth/data/datasources/biometric_datasource.dart';
 import 'features/auth/domain/usecases/authenticate_user.dart';
 import 'features/auth/presentation/bloc/auth_bloc.dart';
 import 'features/auth/presentation/pages/login_page.dart';
-
-// Actividad (lo nuevo)
+import 'features/auth/steps/presentation/widgets/step_counter_widget.dart';
+import 'features/auth/tracking/presentation/widgets/route_map_widget.dart';
 import 'features/activity/presentation/bloc/activity_bloc.dart';
 import 'features/activity/presentation/pages/activity_page.dart';
+import 'features/history/presentation/bloc/history_bloc.dart';
+import 'features/history/presentation/pages/history_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Inicializar inyección de dependencias
   initDependencies();
-
   runApp(const FitnessApp());
 }
 
@@ -2423,15 +3893,13 @@ class FitnessApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final biometricDataSource = BiometricDataSourceImpl();
-    final authenticateUser = AuthenticateUser(biometricDataSource);
+    final authenticateUser    = AuthenticateUser(biometricDataSource);
 
     return MaterialApp(
       title: 'Fitness Tracker',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6366F1),
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF6366F1)),
         useMaterial3: true,
       ),
       home: BlocProvider(
@@ -2442,7 +3910,6 @@ class FitnessApp extends StatelessWidget {
   }
 }
 
-// ── Auth Wrapper (igual que antes) ───────────────────────────────
 class AuthWrapper extends StatefulWidget {
   const AuthWrapper({super.key});
 
@@ -2453,22 +3920,113 @@ class AuthWrapper extends StatefulWidget {
 class _AuthWrapperState extends State<AuthWrapper> {
   bool _isAuthenticated = false;
 
-  void _onAuthSuccess() {
-    setState(() {
-      _isAuthenticated = true;
-    });
+  void _onAuthSuccess() => setState(() => _isAuthenticated = true);
+
+  @override
+  Widget build(BuildContext context) {
+    if (_isAuthenticated) return const HomePage();
+    return LoginPage(onAuthSuccess: _onAuthSuccess);
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
+
+  void _onTabChanged(BuildContext innerContext, int index) {
+    setState(() => _currentIndex = index);
+    // Al entrar al historial, recargar siempre desde la BD
+    if (index == 2) {
+      innerContext.read<HistoryBloc>().add(HistoryLoadRequested());
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_isAuthenticated) {
-      // Autenticado → ir a la página de actividad
-      return BlocProvider(
-        create: (_) => sl<ActivityBloc>(),
-        child: const ActivityPage(),
-      );
-    }
-    return LoginPage(onAuthSuccess: _onAuthSuccess);
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => sl<ActivityBloc>()),
+        BlocProvider(
+          create: (_) => sl<HistoryBloc>()..add(HistoryLoadRequested()),
+        ),
+      ],
+      child: Builder(
+        builder: (innerContext) {
+          return BlocListener<ActivityBloc, ActivityBlocState>(
+            // ── CLAVE: cuando se guarda una sesión automáticamente,
+            // notificar al HistoryBloc para que recargue la lista.
+            listener: (context, state) {
+              if (state is ActivitySessionSaved) {
+                innerContext
+                    .read<HistoryBloc>()
+                    .add(HistoryLoadRequested());
+              }
+            },
+            child: Scaffold(
+              body: IndexedStack(
+                index: _currentIndex,
+                children: const [
+                  _HomeTab(),
+                  ActivityPage(),
+                  HistoryPage(),
+                ],
+              ),
+              bottomNavigationBar: BottomNavigationBar(
+                currentIndex: _currentIndex,
+                onTap: (index) => _onTabChanged(innerContext, index),
+                selectedItemColor: const Color(0xFF6366F1),
+                items: const [
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.home),
+                    label: 'Inicio',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.accessibility_new),
+                    label: 'Detector',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.history),
+                    label: 'Historial',
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _HomeTab extends StatelessWidget {
+  const _HomeTab();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Fitness Tracker'),
+        backgroundColor: const Color(0xFF6366F1),
+        foregroundColor: Colors.white,
+        elevation: 0,
+      ),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          children: [
+            StepCounterWidget(),
+            SizedBox(height: 16),
+            RouteMapWidget(),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -2499,7 +4057,14 @@ dependencies:
   # Manejo de permisos
   permission_handler: ^11.0.1
 
-  # Acelerómetro crudo - para detección de caídas
+  # ── PLUGINS (reemplazan Platform Channels) ──────────────────
+  # Autenticación biométrica (reemplaza MethodChannel biométrico)
+  local_auth: ^2.1.8
+
+  # GPS y ubicación (reemplaza EventChannel/MethodChannel GPS)
+  geolocator: ^11.0.0
+
+  # Acelerómetro y sensores (ya estaba, ahora es la fuente directa)
   sensors_plus: ^5.0.1
 
   # Clasificación de actividad (caminar / correr / quieto)
@@ -2507,6 +4072,10 @@ dependencies:
 
   # Síntesis de voz
   flutter_tts: ^4.0.2
+
+  # Persistencia local para CRUD historial
+  sqflite: ^2.3.0
+  path: ^1.8.3
 
   cupertino_icons: ^1.0.8
 

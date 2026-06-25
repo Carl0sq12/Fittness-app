@@ -4,14 +4,17 @@ import 'features/activity/data/services/tts_service.dart';
 import 'features/activity/presentation/bloc/activity_bloc.dart';
 import 'features/auth/data/datasources/accelerometer_datasource.dart';
 import 'features/auth/tracking/data/datasources/gps_datasource.dart';
+import 'features/history/data/repositories/activity_repository_impl.dart';
+import 'features/history/domain/repositories/activity_repository.dart';
+import 'features/history/presentation/bloc/history_bloc.dart';
 
 final sl = GetIt.instance;
 
 void initDependencies() {
-  // Servicios
+  // ── Servicios ────────────────────────────────────────────────────
   sl.registerLazySingleton<TtsService>(() => TtsService());
 
-  // Datasources
+  // ── Datasources ──────────────────────────────────────────────────
   sl.registerLazySingleton<AccelerometerDataSource>(
     () => AccelerometerDataSourceImpl(),
   );
@@ -22,11 +25,21 @@ void initDependencies() {
     () => ActivityDataSourceImpl(sl<AccelerometerDataSource>()),
   );
 
-  // BLoCs
+  // ── Repositorio CRUD ─────────────────────────────────────────────
+  sl.registerLazySingleton<ActivityRepository>(
+    () => ActivityRepositoryImpl(),
+  );
+
+  // ── BLoCs ────────────────────────────────────────────────────────
   sl.registerFactory<ActivityBloc>(
     () => ActivityBloc(
       dataSource: sl<ActivityDataSourceImpl>(),
       ttsService: sl<TtsService>(),
+      repository: sl<ActivityRepository>(), // ← línea añadida
     ),
+  );
+
+  sl.registerFactory<HistoryBloc>(
+    () => HistoryBloc(sl<ActivityRepository>()),
   );
 }
